@@ -1,0 +1,19 @@
+{
+  "name": "pooch-mern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juancattaneo92/Pooch-MERN-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juancattaneo92/Pooch-MERN-project/issues"
+  },
+  "homepage": "https://github.com/juancattaneo92/Pooch-MERN-project#readme"
+}
