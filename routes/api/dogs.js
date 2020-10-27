@@ -3,49 +3,47 @@ const router = express.Router();
 const mongoose = require("mongoose");
 const passport = require("passport");
 
-const Tweet = require("../../models/Tweet");
-const validateTweetInput = require("../../validation/tweets");
+const Dog = require("../../models/Dog");
+const validateDogInput = require("../../validation/dogs");
 
-router.get("/", (req, res) => {
-  Tweet.find()
-    .sort({ date: -1 })
+// GET ALL DOGS
+router.get("/", passport.authenticate("jwt", { session: false }), (req, res) => {
+  Dog.find()
     .then((dogs) => res.json(dogs))
     .catch((err) => res.status(404).json({ nodogsfound: "No dogs found" }));
 });
 
-router.get("/user/:user_id", (req, res) => {
-  Tweet.find({ user: req.params.user_id })
-    .sort({ date: -1 })
-    .then((tweets) => res.json(tweets))
+// GET A SINGLE DOG BY ID
+router.get("/dogs/:id", passport.authenticate("jwt", { session: false }), (req, res) => {
+  Dog.find({ user: req.params.user_id })
+    .then((dogs) => res.json(dogs))
     .catch((err) =>
-      res.status(404).json({ notweetsfound: "No tweets found from that user" })
+      res.status(404).json({ nodogsfound: "No dogs found from that user" })
     );
 });
 
-router.get("/:id", (req, res) => {
-  Tweet.findById(req.params.id)
-    .then((tweet) => res.json(tweet))
-    .catch((err) =>
-      res.status(404).json({ notweetfound: "No tweet found with that ID" })
-    );
-});
-
+// CREATE AND SAVE A DOG
 router.post(
   "/",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
-    const { errors, isValid } = validateTweetInput(req.body);
+    const { errors, isValid } = validateDogInput(req.body);
 
     if (!isValid) {
       return res.status(400).json(errors);
     }
 
-    const newTweet = new Tweet({
-      text: req.body.text,
-      user: req.user.id,
+    const newDog = new Dog({
+      name: req.body.name,
+      age: req.body.age,
+      breed: req.body.breed,
+      sex: req.body.sex,
+      size: req.body.size,
+      user_id: req.body.user_id,
+      bio: req.body.bio,
     });
 
-    newTweet.save().then((tweet) => res.json(tweet));
+    newDog.save().then((dog) => res.json(dog));
   }
 );
 
