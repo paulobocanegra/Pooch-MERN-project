@@ -21,12 +21,17 @@
   },
   "homepage": "https://github.com/juancattaneo92/Pooch-MERN-project#readme",
   "dependencies": {
+    "aws-sdk": "^2.779.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "concurrently": "^5.3.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.10",
+    "mongoose-sequence": "^5.3.0",
+    "multer": "^1.4.2",
+    "multer-s3": "^2.9.0",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
     "validator": "^13.1.17"
