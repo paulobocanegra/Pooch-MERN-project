@@ -4,7 +4,6 @@ const Schema = mongoose.Schema;
 const DogSchema = new Schema({
     name: {
         type: String,
-        trim: true,
         required: true,
     },
     age: {
@@ -25,12 +24,8 @@ const DogSchema = new Schema({
         // inclusion:{in: ["xs", "s", "m", "l", "xl"]},
         required: true,
     },
-    user_id: {
-        type: Number,
-        required: false, 
-    },
     bio: {
-        type: Text,
+        type: String,
         required: false
     },
     owner: { type: mongoose.Schema.ObjectId, ref: 'User' }
