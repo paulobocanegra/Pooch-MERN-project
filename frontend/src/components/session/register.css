@@ -1,0 +1,136 @@
+.Registration-form{
+    margin:auto;
+    width: 800px;
+    height: 550px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+   
+}
+
+.Registration-input-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.Onboarding-pic{
+    width: 370px;
+    height: 271px;
+    display: inline;
+    margin-top: 100px;
+    
+    
+
+  
+
+}
+.Pooch-logo-text1{
+   
+    font-family: sans-serif;
+    font-size: 45px;
+    display: inline;
+    margin: 5px;
+    color: hsla(45, 100%, 50%, 0.92);
+    padding-top: 15px;
+    
+    
+    
+}
+.registration-logo-wrapper{
+    display: flex;
+    height: 81px;
+    
+    margin-bottom: 15px;
+   
+}
+.Registration-logo{
+    width: 80px;
+    height: 80px;
+    vertical-align: middle;
+}
+.Registration-input{
+    width: 230px;
+    height: 30px;
+    align-self: center;
+    border-radius: 5px;
+    border: 1px solid hsla(0, 0%, 81%, 0.701);
+    font-family: sans-serif;
+    padding: 8px;
+    margin: 10px;
+}
+.Registration-header{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 36px;
+    color:#22288F;
+    padding-top: 50px;
+}
+.login-form{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    
+}
+.Registration-button{
+    width: 250px;
+    height: 50px;
+    align-self: center;
+    border-radius: 5px;
+    border: none;
+    background-color: hsla(254, 74%, 32%, 0.878);
+    color: white;
+    font-family: sans-serif;
+    padding: 8px;
+    margin-top: 20px;
+}
+
+.Registration-button:hover{
+    cursor: pointer;
+    background-color:hsla(237, 62%, 35%, 0.85);
+}
+
+.Registration-button:active{
+    cursor: pointer;
+    background-color:hsl(237, 62%, 35%) ;
+}
+
+/* ------------Dog registration--------------- */
+.Dog-class{
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 15px;
+    color: hsl(237, 62%, 30%);
+}
+.Gender-wrapper{
+    display: flex;
+    
+    
+    justify-content: center;
+    font-family: sans-serif;
+    margin: 15px;
+    font-size: 12px;
+    color: hsla(0,0,34,0.73);
+
+}
+.Size-wrapper{
+    display: flex;
+    color: hsla(0,0,34,0.73);
+    justify-content: center;
+    font-family: sans-serif;
+    margin: 15px;
+    font-size: 12px;
+    
+}
+
+.Registration-input-radio:hover{
+    cursor: pointer;
+
+}
+
+.Registration-input-radio{
+    border: 1px solid purple;
+    transform: scale(1.25);
+    margin:8px;
+    
+}

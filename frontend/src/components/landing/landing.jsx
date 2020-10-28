@@ -1,15 +1,18 @@
 import React from 'react';
+import ModalContainer from '../modal/modal';
 import "./landing.css";
 
-const LandingComponent= ({openModal})=>{
-//    constructor(props){
-//        super(props)
-//    }
+class LandingComponent extends React.Component {
+   constructor(props){
+       super(props)
+   }
 
     
-// 
+render(){
+    const {openModal} = this.props;
         return(
             <div className="Landing-page">
+                <ModalContainer/>
             <div className= "Nav-bar">
                 <div className="Nav-left">
                     <img className="Logo" src="./Pooch-logo.png" alt=""/>
@@ -63,6 +66,7 @@ const LandingComponent= ({openModal})=>{
 
             </div>
         );
+}
 }
 
 

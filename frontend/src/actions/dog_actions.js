@@ -10,15 +10,15 @@ export const receiveAllDogs = (dogs) => {
     return {
         type: RECEIVE_ALL_DOGS,
         dogs
-    }
-}
+    };
+};
 
 export const receiveDog = (dog) => {
     return {
         type: RECEIVE_DOG,
         dog
-    }
-}
+    };
+};
 
 // export const removeDog = (dogId) => {
 //     return {
@@ -32,19 +32,19 @@ export const fetchDogs = () => (dispatch) => {
     return getDogs()
         .then((result) => dispatch(receiveAllDogs(result)))
         .catch(err => console.log(err))
-}
+};
 
 export const fetchDog = (dogId) => (dispatch) => {
     return getDog(dogId)
         .then((result) => dispatch(receiveDog(result)))
         .catch(err => console.log(err))
-}
+};
 
 export const composeDog = (data) => (dispatch) => {
     return createDog(data)
         .then((result) => dispatch(createDog(result)))
         .catch(err => console.log(err))
-}
+};
 
 
 
