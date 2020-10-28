@@ -7,25 +7,30 @@ const DogSchema = new Schema({
         required: true,
     },
     age: {
-        type: Integer,
+        type: Number,
         required: true,
     },
     breed: {
         type: String,
         required: true,
     },
-    sex: {
+    sex: { 
         type: String,
-        inclusion:{in: ["m", "f"]},
+        // inclusion:{in: ["M", "F"]},
         required: true,
     },
     size: {
         type: String,
-        inclusion:{in: ["xs", "s", "m", "l", "xl"]},
+        // inclusion:{in: ["xs", "s", "m", "l", "xl"]},
         required: true,
     },
+    bio: {
+        type: String,
+        required: false
+    },
+    owner: { type: mongoose.Schema.ObjectId, ref: 'User' }
 });
 
-const Dog = mongoose.model("users", DogSchema);
+const Dog = mongoose.model("dogs", DogSchema);
 
-module.exports = User;
+module.exports = Dog;
