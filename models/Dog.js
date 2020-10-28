@@ -24,10 +24,6 @@ const DogSchema = new Schema({
         // inclusion:{in: ["xs", "s", "m", "l", "xl"]},
         required: true,
     },
-    bio: {
-        type: String,
-        required: false
-    },
     owner: { type: mongoose.Schema.ObjectId, ref: 'User' }
 });
 

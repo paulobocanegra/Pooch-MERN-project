@@ -4,6 +4,7 @@ import { RECEIVE_ALL_DOGS, RECEIVE_DOG, REMOVE_DOG } from "../actions/dog_action
 const DogReducer = (state = {}, action) => {
     Object.freeze(state);
     let newState = Object.assign({}, state);
+    // debugger
     switch (action.type) {
         case RECEIVE_ALL_DOGS:
             return action.dogs;
