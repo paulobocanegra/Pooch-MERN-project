@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import { closeModal } from "../../actions/modal_actions";
 import "./login.css"
 
 class LoginForm extends React.Component {
@@ -49,9 +50,10 @@ class LoginForm extends React.Component {
   }
 
   render() {
+    const{closeModal} = this.props
     return (
       <div className="Modal-screen">
-        <button className="Modal-button">X</button>
+        <button onClick={() => closeModal()} className="Modal-button">X</button>
         <form onSubmit={this.handleSubmit}>
           <div className="Login-form" >
             <div className="Logo-wrapper">

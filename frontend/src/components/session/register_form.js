@@ -1,5 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import {Link} from "react-router-dom";
+import "./register.css";
 
 class RegisterForm extends React.Component {
     constructor(props) {
@@ -55,43 +57,59 @@ class RegisterForm extends React.Component {
 
     render() {
         return (
-        <div className="login-form-container">
-            <form onSubmit={this.handleSubmit}>
-            <div className="login-form">
-                <br />
-                <input
-                type="text"
-                value={this.state.email}
-                onChange={this.update("email")}
-                placeholder="Email"
+          <div className="login-form-container">
+              <div className="registration-logo-wrapper">
+                <img className="Registration-logo" src="./Pooch-logo.png" alt=""/>
+                <h1 className="Pooch-logo-text1">pooch</h1>
+              </div>
+            <form className="Registration-form" onSubmit={this.handleSubmit}>
+              <h1 className="Registration-header">Lets Get Started!</h1>
+              <div className="login-form">
+                <img
+                  className="Onboarding-pic"
+                  src="./onboarding_user.png"
+                  alt=""
                 />
-                <br />
-                <input
-                type="text"
-                value={this.state.name}
-                onChange={this.update("name")}
-                placeholder="Name"
-                />
-                <br />
-                <input
-                type="password"
-                value={this.state.password}
-                onChange={this.update("password")}
-                placeholder="Password"
-                />
-                <br />
-                <input
-                type="password"
-                value={this.state.password2}
-                onChange={this.update("password2")}
-                placeholder="Confirm Password"
-                />
-                <br />
-                <input type="submit" value="Submit" />
-                {this.renderErrors()}
-            </div>
+                <div className="Registration-input-wrapper">
+                  <input
+                    className="Registration-input"
+                    type="text"
+                    value={this.state.email}
+                    onChange={this.update("email")}
+                    placeholder="Email"
+                  />
+
+                  <input
+                    className="Registration-input"
+                    type="text"
+                    value={this.state.name}
+                    onChange={this.update("name")}
+                    placeholder="Name"
+                  />
+
+                  <input
+                    className="Registration-input"
+                    type="password"
+                    value={this.state.password}
+                    onChange={this.update("password")}
+                    placeholder="Password"
+                  />
+
+                  <input
+                    className="Registration-input"
+                    type="password"
+                    value={this.state.password2}
+                    onChange={this.update("password2")}
+                    placeholder="Confirm Password"
+                  />
+                <Link to="/dog">
+                  <input className="Registration-button" type="submit" value="Continue" />
+                  </Link>
+                  {this.renderErrors()}
+                </div>
+              </div>
             </form>
-        </div>
+          </div>
         );
     }
 }
