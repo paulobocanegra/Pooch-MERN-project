@@ -1,0 +1,312 @@
+.Landing-page{
+    border: 0;
+    padding: 0%;
+}
+
+
+.Nav-bar{
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background-color: white;
+  height: 90px;
+  width:1423px ;
+  margin:auto;
+
+  
+  
+}
+.Nav-left{
+    display: flex;
+    
+}
+
+
+.Nav-right{
+    display: flex;
+    align-items: center;
+    
+}
+
+.Logo{
+    
+    width: 80px;
+    height: 80px;
+}
+.Nav-button{
+    width: 92px;
+    height: 39px;
+    border-radius: 18px;
+    border: none;
+    box-shadow: none;
+    /* background-color: hsla(237, 62%, 35%, 0.79); */
+    font-weight: 400;
+    font-size: 18px;
+    color: white;    
+    font-family: sans-serif;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    background-color: hsla(254, 74%, 32%, 0.878);
+}
+
+.Nav-button:hover{
+    cursor: pointer;
+    background-color:hsla(237, 62%, 35%, 0.85) ;
+}
+
+.Nav-button:active{
+    cursor: pointer;
+    background-color:hsl(237, 62%, 35%) ;
+}
+
+
+.Logo-text{
+    font-family: sans-serif;
+    font-size: 45px;
+    
+    /* color: hsl(48, 69%, 54%); */
+    margin: 0px;
+    margin-top: 10px;
+    height: fit-content;
+    color: hsla(45, 100%, 50%, 0.92);
+   
+}
+
+.Nav-bar-text{
+    font-family: sans-serif;
+    font-weight: 400;
+    width: 100px;
+    height: 35px;
+    vertical-align: text-bottom;
+    
+}
+
+.Nav-bar-text:hover{
+    cursor: pointer;
+}
+
+.Hero-banner{
+    width: 1423px;
+    height: 440px;
+    border: none;
+    padding: 0%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+.Hero-image{
+    width: 1423px;
+    position: relative;
+    height: 100%;
+    margin: auto;
+}
+
+.Call-to-action{
+    background-color:rgba(255, 255, 255, 0.75) ;
+    width: 542px;
+    height: 230px;
+    border-radius: 10px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 150px;
+    backdrop-filter: blur(3px);
+}
+
+.Choosing-pooch{
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 650;
+    font-size: 27px;
+    color:hsla(254, 70%, 32%, 0.99);
+    margin-bottom: 1px;
+    margin-top: 50px;
+    width: 1423px;
+    margin: auto;
+    margin-top: 35px;
+
+}
+
+.Text-wrapper1{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.Join-pooch-text{
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+    color: #454444;
+    margin-bottom: 1px;
+    margin-top: 30px;
+    padding: 10px;
+}
+.Hook-text{
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: #454444;
+    width: 385px;
+}
+.Button-wrapper1{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+.Login-button{
+    height: 48px;
+    width: 150px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    background-color: hsl(0, 0%, 80%);
+    border: 0px;
+}
+.Login-button:hover{
+    cursor: pointer;
+    background-color:hsl(0, 0%, 75%) ;
+}
+
+.Login-button:active{
+    cursor: pointer;
+    background-color:hsl(0, 0%, 70%) ;
+}
+
+.Signup-button{
+    height: 48px;
+    width: 150px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    /* background-color: hsla(237, 62%, 35%, 0.79); */
+    color: white;
+    border: 0px;
+    background-color: hsla(254, 74%, 32%, 0.878);
+}
+
+.Signup-button:hover{
+    cursor: pointer;
+    background-color:hsla(237, 62%, 35%, 0.85);
+    
+}
+
+.Signup-button:active{
+    cursor: pointer;
+    background-color:hsl(237, 62%, 35%) ;
+
+    
+}
+
+
+.Learn-more-section{
+    width: 1423px;
+    height: 500px;
+    /* background-color:hsla(237, 41%, 42%, 0.721) ; */
+    border: none;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Learn-more-image{
+    width: 270px;
+    height: 270px;
+    margin: 50px 100px 20px 100px ;
+}
+
+.Learn-more-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 510px;
+    /* margin-top: 10px; */
+
+   
+}
+
+.Learn-more-text{
+    font-size: 14px;
+    /* color: rgba(237, 234, 234, 0.85); */
+    font-family: sans-serif;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    color: hsl(0, 1%, 40%);
+    font-weight: 100;
+    
+    
+}
+
+.Learn-more-button{
+    font-family: sans-serif;
+    font-size: 14px;
+    color: hsl(0, 0%, 100%) ;
+    /* background-color: hsl(48, 69%, 54%) ; */
+    border: none;
+    width: 103px;
+    height: 35px;
+    border-radius: 5px;
+    background:hsla(45, 100%, 50%, 0.865);
+    margin-top: 15px;
+}
+
+.Learn-more-button:hover{
+    cursor: pointer;
+    background-color: hsl(48, 69%, 48%)
+}
+.Learn-more-button:active{
+    cursor: pointer;
+    background-color: hsl(48, 69%, 43%)
+
+    
+}
+
+.Socializing-section{
+    display: flex;
+    justify-content: space-between;
+
+    width: 1000px;
+    height: 350px;
+}
+.Dog-image{
+    height: 600px;
+    position: relative;
+    width: 400px;
+
+}
+.Why-socialize-blurb{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+}
+.socialization-header{
+    font-family: sans-serif;
+    text-align: center;
+    
+}
+
+.Socializing-blurb{
+    font-family: sans-serif;
+    width: 600px;
+    height: 275px;
+    text-align: center;
+    background-color: blueviolet;
+    position: absolute;
+    left: 350px;
+    bottom: -800px;
+}
+
+/* ------------------Pseudo Classes--------------------- */
+
