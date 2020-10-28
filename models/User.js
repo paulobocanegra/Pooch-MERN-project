@@ -20,6 +20,10 @@ const UserSchema = new Schema({
     type: String,
     required: false
   },
+  bio: {
+    type: String,
+    required: false
+  },
   dog: { type: mongoose.Schema.ObjectId, ref: 'Dog' }
 });
 
