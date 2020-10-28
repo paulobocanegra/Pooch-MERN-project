@@ -5,7 +5,14 @@ const app = express();
 const db = require("./config/keys").mongoURI;
 const bodyParser = require("body-parser");
 const users = require("./routes/api/users");
+
+/** */
+const multer = require("multer");
+var AWS = require("aws-sdk");
+/** */
+
 const dogs = require("./routes/api/dogs")
+
 
 mongoose
 .connect(db, { useNewUrlParser: true })
