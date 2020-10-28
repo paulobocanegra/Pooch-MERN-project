@@ -1,0 +1,118 @@
+.Modal-screen{
+  /* display: none;  */
+  position: fixed; 
+  z-index: 9999; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.Login-form{
+  display: flex;
+  flex-direction: column;
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 25%; 
+  height: 500px;
+  border-radius: 5px;
+  clear: both;
+}
+
+.Login-pooch-text-logo{
+     font-family: sans-serif;
+    font-size: 45px;
+    display: inline;
+    margin: 0px;
+    margin-top: 10px;
+    height: fit-content;
+    color: hsla(45, 100%, 50%, 0.92);
+    line-height: 50px;
+   
+}
+
+.Logo-wrapper{
+    display: flex;
+    width: fit-content;
+    align-self: center;
+    margin-top: 30px;
+    
+}
+.Login-pooch-logo{
+    width: 80px;
+    height: 80px;
+}
+
+.Login-input{
+    width: 230px;
+    height: 40px;
+    align-self: center;
+    border-radius: 5px;
+    border: 1px solid hsla(0, 0%, 81%, 0.701);
+    font-family: sans-serif;
+    padding: 8px;
+    margin: 20px;
+
+    
+}
+
+.Login-form-login-button{
+    width: 250px;
+    height: 50px;
+    align-self: center;
+    border-radius: 5px;
+    border: none;
+    background-color: hsla(254, 74%, 32%, 0.878);
+    color: white;
+    font-family: sans-serif;
+    padding: 8px;
+    margin-top: 20px;
+}
+
+.Login-form-login-button:hover{
+    cursor: pointer;
+    background-color: hsla(254, 74%, 32%, 0.80)
+}
+
+.Login-input-wrapper{
+    margin-top: 35px ;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-self: center;
+    /* background-color: aqua; */
+    width: fit-content;
+    
+}
+
+.Redirect{
+    margin-top: 35px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+    color: rgb(82, 82, 82);
+    font-size: 12px;
+    
+}
+
+.Modal-button{
+    float: right;
+    margin-top: 30px;
+    margin-right: 30px;
+    color: #fefefe;
+    font-size: 35px;
+    font-weight: 600;
+    background-color: rgba(255,255,255,0);
+    border: none;
+}
+
+.Modal-button:hover{
+    cursor: pointer;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import "./login.css"
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -49,27 +50,39 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="Modal-screen">
+        <button className="Modal-button">X</button>
         <form onSubmit={this.handleSubmit}>
-          <div>
-            <br />
-            <input
-              type="text"
-              value={this.state.email}
-              onChange={this.update("email")}
-              placeholder="Email"
-            />
-            <br />
-            <input
-              type="password"
-              value={this.state.password}
-              onChange={this.update("password")}
-              placeholder="Password"
-            />
-            <br />
-            <input type="submit" value="Submit" />
-            {this.renderErrors()}
+          <div className="Login-form" >
+            <div className="Logo-wrapper">
+              <img className="Login-pooch-logo" src="./Pooch-logo.png" alt=""/>
+              <h1 className="Login-pooch-text-logo">pooch</h1>
+            </div>
+            <div className="Login-input-wrapper">
+              <input className="Login-input"
+                type="text"
+                value={this.state.email}
+                onChange={this.update("email")}
+                placeholder="Email"
+                />
+            
+              <input
+                className="Login-input"
+                type="password"
+                value={this.state.password}
+                onChange={this.update("password")}
+                placeholder="Password"
+                />
+            
+              <input className="Login-form-login-button" type="submit" value="Submit" />
+              
+              <div className="Redirect">Not A Member Yet?
+                <p>Sign Up</p>
+              </div>
+            </div>
           </div>
+          
+                {this.renderErrors()}
         </form>
       </div>
     );
