@@ -1,5 +1,5 @@
 export const fetchDogs = (currentUserId, dogs=[]) => {
-   debugger
+   // debugger
    let ownedDogs = dogs.filter( dog => dog.owner = currentUserId );
    return ownedDogs;
 }

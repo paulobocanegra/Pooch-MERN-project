@@ -4,7 +4,7 @@ import DogRegistration from "./dog_registration";
 
 const mapStateToProps = state =>{
     return{
-      currentUserId: state.session.user.id
+      currentUser: state.session.user
     };
 };
 

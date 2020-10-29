@@ -102,9 +102,9 @@ class RegisterForm extends React.Component {
                     onChange={this.update("password2")}
                     placeholder="Confirm Password"
                   />
-                <Link onClick={this.handleSubmit}>
+                <a onClick={this.handleSubmit}>
                   <input className="Registration-button" type="submit" value="Continue" />
-                  </Link>
+                  </a>
                   {this.renderErrors()}
                 </div>
               </div>

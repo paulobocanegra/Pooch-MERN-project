@@ -9,8 +9,7 @@ export default class DogRegistration extends React.Component{
             age:"",
             breed:"",
             sex:"",
-            size:"",
-            owner: this.props.currentUserId
+            size:""
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -29,7 +28,8 @@ export default class DogRegistration extends React.Component{
   
   handleSubmit(e) {
     e.preventDefault();
-    this.props.composeDog(this.state)
+    let dog = Object.assign({}, this.state, { owner: this.props.currentUser.id })
+    this.props.composeDog(dog)
       .then(this.props.history.push("/profile"));
   }
 
