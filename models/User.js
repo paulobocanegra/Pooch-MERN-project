@@ -42,12 +42,12 @@ module.exports = User;
 //   User: String
 // })
 
-EventsModel.statics.logEvent = function (val, cb) {
-  const eventObj = new this(val);
-  eventObj.save(cb)
+// EventsModel.statics.logEvent = function (val, cb) {
+//   const eventObj = new this(val);
+//   eventObj.save(cb)
 
-}
+// }
 
-EventsModel.statics.getAll = function (cb) {
-  return this.find(cb)
-}
+// EventsModel.statics.getAll = function (cb) {
+//   return this.find(cb)
+// }
