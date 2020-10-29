@@ -13,6 +13,7 @@ import LoginFormContainer from "./session/login_form_container";
 import RegisterFormContainer from "./session/register_form_container";
 import LandingPageContainer from './landing/landing_container';
 import DogRegisterContainer from '../components/dog/dog_registration_container';
+import ProfileContainer from "../components/profile/profile_container";
 
 
 const App = () => (
@@ -21,9 +22,10 @@ const App = () => (
     <Switch>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/register" component={RegisterFormContainer} />
-      <Route exact path="/dog" component={DogRegisterContainer }/>
+      <Route exact path="/dogs" component={DogRegisterContainer }/>
+      <ProtectedRoute exact path="/profile" component={ProfileContainer}/>
       <ProtectedRoute exact path="/main" component={MainPageContainer} />
-      <Route path='/' component={LandingPageContainer} />
+      <AuthRoute path='/' component={LandingPageContainer} />
     </Switch>
   </div>
 );

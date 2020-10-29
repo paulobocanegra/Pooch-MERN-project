@@ -39,12 +39,10 @@ router.post(
 
     const newDog = new Dog({
       name: req.body.name,
-      age: req.body.age,
+      // age: req.body.age,
       breed: req.body.breed,
       sex: req.body.sex,
       size: req.body.size,
-      bio: req.body.bio,
-      owner: req.body.owner 
     });
 
     newDog.save().then((dog) => res.json(dog));

@@ -3,8 +3,14 @@ import {connect} from "react-redux"
 import DogRegistration from "./dog_registration";
 
 const mapStateToProps = state =>{
-    return{
-
+    return {
+      dog: {
+        name: "",
+        age: "",
+        breed: "",
+        sex: "",
+        size: "",
+      },
     };
 };
 

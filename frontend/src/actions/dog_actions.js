@@ -1,4 +1,4 @@
-import { getDogs, getDog, createDog } from "../util/dogs_util"
+import * as DogApiUtil from "../util/dogs_util"
 
 export const RECEIVE_ALL_DOGS = "RECEIVE_ALL_DOGS";
 export const RECEIVE_DOG = "RECEIVE_DOG";
@@ -29,21 +29,21 @@ export const receiveDog = (dog) => {
 
 // THUNK ACTION CREATORS
 export const fetchDogs = () => (dispatch) => {
-    return getDogs()
+    return DogApiUtil.getDogs()
         .then((result) => dispatch(receiveAllDogs(result)))
-        .catch(err => console.log(err))
+        .catch(err => console.log(err));
 };
 
 export const fetchDog = (dogId) => (dispatch) => {
-    return getDog(dogId)
-        .then((result) => dispatch(receiveDog(result)))
-        .catch(err => console.log(err))
+    return DogApiUtil.getDog(dogId)
+      .then((result) => dispatch(receiveDog(result)))
+      .catch((err) => console.log(err));
 };
 
 export const composeDog = (data) => (dispatch) => {
-    return createDog(data)
-        .then((result) => dispatch(createDog(result)))
-        .catch(err => console.log(err))
+    return DogApiUtil.createDog(data)
+      .then((result) => dispatch(receiveDog(result)))
+      .catch((err) => console.log(err));
 };
 
 
