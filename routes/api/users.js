@@ -21,27 +21,51 @@ router.get( "/current", passport.authenticate("jwt", { session: false }),
   }
 );
 
-router.patch('/:userId', 
-// passport.authenticate("jwt", { session: false }),
-  (req, res) => {
-  const { errors, isValid } = validateUpdateInput(req.body);
-  if (!isValid) {
-    return res.status(400).json(errors);
-  }
-  User.updateOne(
+router.patch("/:userId", (req, res) => {
+  User.findByIdAndUpdate(
     { _id: req.params.userId},
-    { $set: 
-      { name: req.body.name, 
-        email: req.body.email, 
-        password: req.body.password, 
-        location: req.body.location, 
-        bio: req.body.bio, 
-        liked_users: req.body.liked_users, 
-        matches: req.body.matches, 
+    { name: req.body.name, 
+      email: req.body.email, 
+      password: req.body.password, 
+      location: req.body.location, 
+      bio: req.body.bio, 
+      liked_users: req.body.liked_users, 
+      matches: req.body.matches, 
+      },
+    function(err, result) {
+      if (err) {
+        res.send(err);
+      } else {
+        res.send(result);
       }
-    })
+    }
+  );
+});
 
-  });  
+
+// router.patch('/:userId', 
+// // passport.authenticate("jwt", { session: false }),
+//   (req, res) => {
+//   const { errors, isValid } = validateUpdateInput(req.body);
+//   if (!isValid) {
+//     return res.status(400).json(errors);
+//   }
+//   // debugger
+//   // return req.params.userId
+//   User.updateOne(
+//     { _id: req.params.userId},
+//     { $set: 
+//       { name: req.body.name, 
+//         // email: req.body.email, 
+//         // password: req.body.password, 
+//         // location: req.body.location, 
+//         // bio: req.body.bio, 
+//         // liked_users: req.body.liked_users, 
+//         // matches: req.body.matches, 
+//       }
+//     })
+
+//   });  
 
 
 
