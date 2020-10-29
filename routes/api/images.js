@@ -17,12 +17,12 @@ router.get('/', (req,res) => {
         .catch(err => res.status(400).json(err));
 })
 
-// router.get("/posts/:post_id", (req, res) => {
-//     Image
-//         .find({ postId: req.params.post_id })
-//         .then(images => res.json(images))
-//         .catch(err => res.status(400).json(err));
-// });
+router.get("/users/:users_id", (req, res) => {
+    Image
+        .find({ userId: req.params.users_id })
+        .then(images => res.json(images))
+        .catch(err => res.status(400).json(err));
+});
 
 
 router.post('/uploadImage', passport.authenticate("jwt", { session: false }), (req, res) => {
@@ -30,13 +30,13 @@ router.post('/uploadImage', passport.authenticate("jwt", { session: false }), (r
         if(err) {
             return res.status(422).json({errors: err.message});
         }    
-        return res.json({'imageUrl': req.file.location, 'postId': req.body.postId, 'fileName': req.file.originalname});
+        return res.json({'imageUrl': req.file.location, 'userId': req.body.userId, 'fileName': req.file.originalname});
     })   
 });
 
 router.post('/uploadImageDB', (req, res) => {
     const newImage = new Image({
-        postId: req.body.data.postId,
+        userId: req.body.data.userId,
         fileName: req.body.data.fileName,
         src: req.body.data.imageUrl
     });
