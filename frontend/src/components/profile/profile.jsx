@@ -27,8 +27,15 @@ class Profile extends React.Component {
         </div>
       </div>
           <div className="Profile-card">
-            
+            <div className="Profile-card-left">
+            <img className="Profile-image" src="./empty_profile.png" alt=""/>
+            <textarea className="Bio-input" name="" id="" cols="30" rows="10" placeholder="Tell Us About You and your Dog..."></textarea>
           </div>
+          <div className="Profile-card-right">
+            <button className="Skip-button">Skip</button>
+
+          </div>
+      </div>
       </div>
     );
   }
