@@ -1,0 +1,72 @@
+.Nav-bar-text-greeting{
+     font-family: sans-serif;
+    font-weight: 400;
+    width: fit-content;
+    height: fit-content;
+    vertical-align: text-bottom;
+    
+    text-align: center;
+    text-align: inherit;
+    font-size: 22px;
+    padding-bottom: 7px;
+}
+
+
+.Profile-card{
+     margin:auto;
+    width: 800px;
+    height: 600px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    display: flex;
+    margin-top: 25px;
+    justify-content: space-between;
+}
+
+.Profile-card-left{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    
+}
+
+.Profile-image{
+    height: 150px;
+    width: 150px;
+    align-self: center;
+    margin-top: 15px;
+}
+.Profile-image:hover{
+    cursor: pointer;
+}
+
+.Bio-input{
+    height: 350px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid hsla(0, 0%, 81%, 0.701);
+    font-family: sans-serif;
+    padding: 8px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.Profile-card-right{
+    display: flex;
+    flex-direction: column;
+   
+    margin-left: 35px;
+    margin-right: 50px;
+    width: 380px;
+    justify-content: flex-end;
+}
+
+.Skip-button{
+    width: 100px;
+    margin-bottom: 50px;
+    background-color: transparent;
+    border:none;
+    font-size: 20px;
+    color: grey;
+}

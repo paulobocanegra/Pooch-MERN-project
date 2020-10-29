@@ -6,7 +6,7 @@ module.exports = function validateDogInput(data) {
 
     data.name = validText(data.name) ? data.name : '';
     data.breed = validText(data.breed) ? data.breed : '';
-    data.bio = validText(data.bio) ? data.bio : '';
+    // data.bio = validText(data.bio) ? data.bio : '';
 
     if (!Validator.isLength(data.name, { min: 1, max: 30 })) {
         errors.name = 'Dog name must be between 1 and 30 characters';
@@ -32,12 +32,12 @@ module.exports = function validateDogInput(data) {
         errors.size = 'Size field is required';
     }
 
-    if (!Validator.isLength(data.bio, { min: 1, max: 100 })) {
-    errors.breed = 'Bio must be between 1 and 100 characters';
-    }
-    if (Validator.isEmpty(data.bio)) {
-        errors.bio = 'Bio field is required';
-    }
+    // if (!Validator.isLength(data.bio, { min: 1, max: 100 })) {
+    // errors.breed = 'Bio must be between 1 and 100 characters';
+    // }
+    // if (Validator.isEmpty(data.bio)) {
+    //     errors.bio = 'Bio field is required';
+    // }
 
     return {
         errors,

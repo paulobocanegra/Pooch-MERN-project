@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-class DogRegistration extends React.Component{
+export default class DogRegistration extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -9,11 +9,29 @@ class DogRegistration extends React.Component{
             age:"",
             breed:"",
             sex:"",
-            size:""
+            size:"",
+            owner: this.props.currentUserId
         };
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-
+  handleChange(fieldType){
+    return (e) => {
+      let value = e.currentTarget.value;
+      if(fieldType === 'age') {
+        value = parseInt(value);
+      }
+      this.setState({ [fieldType]: value });
+    };
+  }
+  
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.composeDog(this.state)
+      .then(this.props.history.push("/profile"));
+  }
 
     render(){
         return (
@@ -40,16 +58,24 @@ class DogRegistration extends React.Component{
                   <input
                     className="Registration-input"
                     type="text"
-                    // value={this.state.email}
-                    // onChange={this.update("email")}
+                    value={this.state.name}
                     placeholder="Dog's Name"
+                    onChange={this.handleChange("name")}
                   />
 
                   <input
                     className="Registration-input"
                     type="text"
-                    // value={this.state.name}
-                    // onChange={this.update("name")}
+                    value={this.state.age}
+                    placeholder="Dog's Age"
+                    onChange={this.handleChange("age")}
+                  />
+
+                  <input
+                    className="Registration-input"
+                    type="text"
+                    value={this.state.breed}
+                    onChange={this.handleChange("breed")}
                     placeholder="Breed"
                   />
                   <h6 className="Dog-class">Sex</h6>
@@ -60,8 +86,8 @@ class DogRegistration extends React.Component{
                         className="Registration-input-radio"
                         type="radio"
                         name="sex"
-                        // value={this.state.password}
-                        // onChange={this.update("password")}
+                        value="M"
+                        onChange={this.handleChange("sex")}
                       />
                     </label>
                     <label>
@@ -70,8 +96,8 @@ class DogRegistration extends React.Component{
                         className="Registration-input-radio"
                         type="radio"
                         name="sex"
-                        // value={this.state.password}
-                        // onChange={this.update("password")}
+                        value="F"
+                        onChange={this.handleChange("sex")}
                       />
                     </label>
                   </div>
@@ -82,9 +108,8 @@ class DogRegistration extends React.Component{
                       <input
                         className="Registration-input-radio"
                         type="radio"
-                        // value={this.state.password2}
-                        // onChange={this.update("password2")}
-                        placeholder="Confirm Password"
+                        value="XS"
+                        onChange={this.handleChange("size")}
                       />
                     </label>
                     <label>
@@ -92,9 +117,8 @@ class DogRegistration extends React.Component{
                       <input
                         className="Registration-input-radio"
                         type="radio"
-                        // value={this.state.password2}
-                        // onChange={this.update("password2")}
-                        placeholder="Confirm Password"
+                        value="S"
+                        onChange={this.handleChange("size")}
                       />
                     </label>
                     <label>
@@ -102,9 +126,8 @@ class DogRegistration extends React.Component{
                       <input
                         className="Registration-input-radio"
                         type="radio"
-                        // value={this.state.password2}
-                        // onChange={this.update("password2")}
-                        placeholder="Confirm Password"
+                        value="M"
+                        onChange={this.handleChange("size")}
                       />
                     </label>
 
@@ -113,9 +136,8 @@ class DogRegistration extends React.Component{
                       <input
                         className="Registration-input-radio"
                         type="radio"
-                        // value={this.state.password2}
-                        // onChange={this.update("password2")}
-                        placeholder="Confirm Password"
+                        value="L"
+                        onChange={this.handleChange("size")}
                       />
                     </label>
 
@@ -124,9 +146,8 @@ class DogRegistration extends React.Component{
                       <input
                         className="Registration-input-radio"
                         type="radio"
-                        // value={this.state.password2}
-                        // onChange={this.update("password2")}
-                        placeholder="Confirm Password"
+                        value="XL"
+                        onChange={this.handleChange("size")}
                       />
                     </label>
                   </div>
@@ -144,4 +165,4 @@ class DogRegistration extends React.Component{
     }
 }
 
-export default DogRegistration;
+
