@@ -15,7 +15,7 @@ const UserSchema = new Schema({
     type: String,
     required: true,
   },
-  location: {
+  location: { // profile edit component
     type: String,
     required: false
   },
@@ -28,7 +28,7 @@ const UserSchema = new Schema({
     required: false
     //array will look like: ["2","4","6"]
   },
-  dog: { type: mongoose.Schema.ObjectId, ref: 'Dog' }
+  dog: { type: mongoose.Schema.ObjectId, ref: 'Dog' } // matches
 });
 
 const User = mongoose.model("users", UserSchema);

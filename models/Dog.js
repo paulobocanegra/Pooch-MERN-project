@@ -24,7 +24,7 @@ const DogSchema = new Schema({
         // inclusion:{in: ["xs", "s", "m", "l", "xl"]},
         required: true,
     },
-    owner: { type: mongoose.Schema.ObjectId, ref: 'User' }
+    owner: { type: mongoose.Schema.ObjectId, ref: 'User' } // this.state = { owner: currentUserId }
 });
 
 const Dog = mongoose.model("dogs", DogSchema);

@@ -1,4 +1,4 @@
-import { RECEIVE_ALL_DOGS, RECEIVE_DOG, REMOVE_DOG } from "../actions/dog_actions"
+import { RECEIVE_ALL_DOGS, RECEIVE_DOG, REMOVE_DOG } from "../../actions/dog_actions"
 
 
 const DogReducer = (state = {}, action) => {

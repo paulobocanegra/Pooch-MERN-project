@@ -21,7 +21,7 @@ const Protected = ({ component: Component, loggedIn, ...rest }) => (
         <Component {...props} />
       ) : (
         // Redirect to the login page if the user is already authenticated
-        <Redirect to="/login" />
+        <Redirect to="/" />
       )
     }
   />
@@ -29,7 +29,7 @@ const Protected = ({ component: Component, loggedIn, ...rest }) => (
 
 
 const mapStateToProps = state => (
-  {loggedIn: state.session.isAuthenticated}
+  {loggedIn: state.session.isAuthenticated || state.session.isSignedIn}
 //   {loggedIn: state.session.isSignedIn}
 );
 

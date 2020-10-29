@@ -41,8 +41,9 @@ class RegisterForm extends React.Component {
         password: this.state.password,
         password2: this.state.password2,
         };
-
-        this.props.register(user, this.props.history);
+        debugger
+        this.props.register(user, this.props.history)
+          // .then( () => this.props.login(user) );
     }
 
     renderErrors() {
@@ -102,9 +103,10 @@ class RegisterForm extends React.Component {
                     onChange={this.update("password2")}
                     placeholder="Confirm Password"
                   />
-                <Link to="/dog">
+                {/* <Link to="/dog">
                   <input className="Registration-button" type="submit" value="Continue" />
-                  </Link>
+                  </Link> */}
+                  <button>Submit</button>
                   {this.renderErrors()}
                 </div>
               </div>
