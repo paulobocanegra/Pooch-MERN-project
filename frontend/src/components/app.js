@@ -15,6 +15,7 @@ import RegisterFormContainer from "./session/register_form_container";
 import LandingPageContainer from './landing/landing_container';
 import DogRegisterContainer from '../components/dog/dog_registration_container';
 import ProfileContainer from "../components/profile/profile_container";
+import FeedContainer from "../components/feed/feed_container";
 
 
 const App = () => (
@@ -25,7 +26,7 @@ const App = () => (
       <AuthRoute exact path="/register" component={RegisterFormContainer} />
       <Route exact path="/dogs" component={DogRegisterContainer }/>
       <ProtectedRoute exact path="/profile" component={ProfileContainer}/>
-      {/* <ProtectedRoute exact path="/main" component={MainPageContainer} /> */}
+      <ProtectedRoute exact path="/feed" component={FeedContainer} />
       <AuthRoute path='/' component={LandingPageContainer} />
     </Switch>
   </div>

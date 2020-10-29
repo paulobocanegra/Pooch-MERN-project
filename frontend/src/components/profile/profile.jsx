@@ -14,28 +14,37 @@ class Profile extends React.Component {
     const { currentUser, logout } = this.props;
     return (
       <div>
-      <div className="Nav-bar">
-        <div className="Nav-left">
-          <img className="Logo" src="./Pooch-logo.png" alt="" />
-          <h1 className="Logo-text">pooch</h1>
+        <div className="Nav-bar">
+          <div className="Nav-left">
+            <img className="Logo" src="./Pooch-logo.png" alt="" />
+            <h1 className="Logo-text">pooch</h1>
+          </div>
+          <div className="Nav-right">
+            <h1 className="Nav-bar-text-greeting">Hello, {currentUser.name}</h1>
+            <button className="Nav-button" onClick={logout}>
+              LogOut
+            </button>
+          </div>
         </div>
-        <div className="Nav-right">
-          <h1 className="Nav-bar-text-greeting">Hello, {currentUser.name}</h1>
-          <button className="Nav-button" onClick={logout}>
-            LogOut
-          </button>
-        </div>
-      </div>
-          <div className="Profile-card">
-            <div className="Profile-card-left">
-            <img className="Profile-image" src="./empty_profile.png" alt=""/>
-            <textarea className="Bio-input" name="" id="" cols="30" rows="10" placeholder="Tell Us About You and your Dog..."></textarea>
+        <div className="Profile-card">
+          <div className="Profile-card-left">
+            <img className="Profile-image" src="./empty_profile.png" alt="" />
+            <textarea
+              className="Bio-input"
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Tell Us About You and your Dog..."
+            ></textarea>
           </div>
           <div className="Profile-card-right">
-            <button className="Skip-button">Skip</button>
-
+            <div className="Profile-buttons">
+              <button className="Skip-button">Skip</button>
+              <button className="Start-button">Get Started!</button>
+            </div>
           </div>
-      </div>
+        </div>
       </div>
     );
   }

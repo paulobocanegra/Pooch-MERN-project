@@ -70,3 +70,26 @@
     font-size: 20px;
     color: grey;
 }
+
+.Skip-button:hover{
+    cursor: pointer;
+}
+
+.Start-button{
+    width: 120px;
+    margin-bottom: 50px;
+    background-color: transparent;
+    border:none;
+    font-size: 20px;
+    color: hsla(254, 74%, 32%, 0.878);
+}
+
+.Start-button:hover{
+    cursor: pointer;
+    
+}
+
+.Profile-buttons{
+    display: flex;
+    justify-content: space-between;
+}
