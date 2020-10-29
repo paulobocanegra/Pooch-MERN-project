@@ -7,10 +7,12 @@ const DogReducer = (state = {}, action) => {
     // debugger
     switch (action.type) {
         case RECEIVE_ALL_DOGS:
-            return action.dogs;
-            // return action.dogs.data;
+
+            // return action.dogs;
+            return action.dogs.data;
       case RECEIVE_DOG:
-            newState.dog.id = action.dog;
+            // debugger
+            newState[action.dog.data._id] = action.dog.data;
             // newState.dog.id = action.dog.data;
             return newState; 
         default:
@@ -19,25 +21,4 @@ const DogReducer = (state = {}, action) => {
 }
 
 export default DogReducer;
-
-// const TweetsReducer = (state = { all: {}, user: {}, new: undefined }, action) => {
-//     Object.freeze(state);
-//     let newState = Object.assign({}, state);
-//     switch(action.type) {
-//       case RECEIVE_TWEETS:
-//         newState.all = action.tweets.data;
-//         return newState;
-//       case RECEIVE_USER_TWEETS:
-//         newState.user = action.tweets.data;
-//         return newState;
-//       case RECEIVE_NEW_TWEET:
-//         newState.new = action.tweet.data
-//         return newState;
-//       default:
-//         return state;
-//     }
-//   };
-  
-//   export default TweetsReducer;
-
 

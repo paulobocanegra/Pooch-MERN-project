@@ -9,5 +9,5 @@ export const getDog = (dogId) => {
 };
 
 export const createDog = (data) => {
-    return axios.post('/api/dogs/', data)
+    return axios.post('/api/dogs/create', data);
 };

@@ -42,8 +42,8 @@ export const fetchDog = (dogId) => (dispatch) => {
 
 export const composeDog = (data) => (dispatch) => {
     return createDog(data)
-        .then((result) => dispatch(createDog(result)))
-        .catch(err => console.log(err))
+      .then((result) => dispatch(receiveDog(result)))
+      .catch((err) => console.log(err));
 };
 
 
