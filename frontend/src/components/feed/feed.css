@@ -1,0 +1,55 @@
+.Discover-center{
+    display: flex;
+}
+
+.Message-center{
+    background-color: aqua;
+    width: 300px;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Discover-nav{
+    background-color: blue;
+    width: 1000px;
+    height: 100px;
+}
+
+.User-avatar{
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    
+}
+
+.Search-matches{
+    width: 95%;
+    align-self: center;
+    border-radius: 5px;
+    height: 25px;
+    border: 1px solid grey;
+    padding: 13px;
+    margin-top: 10px;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.new{
+    
+    font-family: sans-serif;
+    font-size: 15px;
+    background-color: azure;
+    
+    
+}
+
+.Matched-user{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+
+}
