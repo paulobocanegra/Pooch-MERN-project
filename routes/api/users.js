@@ -8,6 +8,7 @@ const passport = require("passport");
 
 const validateRegisterInput = require("../../validation/register");
 const validateLoginInput = require("../../validation/login");
+const validateUpdateInput = require("../../validation/update");
 
 
 router.get( "/current", passport.authenticate("jwt", { session: false }),
@@ -19,6 +20,32 @@ router.get( "/current", passport.authenticate("jwt", { session: false }),
     });
   }
 );
+
+router.patch('/:userId', 
+// passport.authenticate("jwt", { session: false }),
+  (req, res) => {
+  const { errors, isValid } = validateUpdateInput(req.body);
+  if (!isValid) {
+    return res.status(400).json(errors);
+  }
+  User.updateOne(
+    { _id: req.params.userId},
+    { $set: 
+      { name: req.body.name, 
+        email: req.body.email, 
+        password: req.body.password, 
+        location: req.body.location, 
+        bio: req.body.bio, 
+        liked_users: req.body.liked_users, 
+        matches: req.body.matches, 
+      }
+    })
+
+  });  
+
+
+
+
 router.post('/register', (req, res) => {
   const { errors, isValid } = validateRegisterInput(req.body);
   if (!isValid) {
