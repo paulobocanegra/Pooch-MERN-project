@@ -43,7 +43,7 @@ class RegisterForm extends React.Component {
         };
         debugger
         this.props.register(user, this.props.history)
-          // .then( () => this.props.login(user) );
+          .then( () => this.props.login(user) );
     }
 
     renderErrors() {
@@ -103,7 +103,7 @@ class RegisterForm extends React.Component {
                     onChange={this.update("password2")}
                     placeholder="Confirm Password"
                   />
-                {/* <Link to="/dog">
+                {/* <Link to="/dog" onClick={this.handleSubmit}>
                   <input className="Registration-button" type="submit" value="Continue" />
                   </Link> */}
                   <button>Submit</button>
