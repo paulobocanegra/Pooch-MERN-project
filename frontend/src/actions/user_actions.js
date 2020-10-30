@@ -24,3 +24,9 @@ export const updateUser = (userId, user) => dispatch => (
       .then( user => dispatch(receiveUser(user)) )
       .catch( err => console.log(err) )
 )
+
+export const uploadPhoto = (userId, file) => dispatch => (
+   util.uploadPhoto(userId, file)
+      .then( user => dispatch(receiveUser(user)) )
+      .catch( err => console.log(err) )
+)

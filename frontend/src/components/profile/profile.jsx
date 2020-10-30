@@ -6,8 +6,6 @@ class Profile extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      photoFile: null,
-      photoUrl: null,
       bio: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -24,9 +22,9 @@ class Profile extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const formData = new FormData();
-    formData.append("user[photo]", this.state.photoFile);
-    // updateUser(formData);
-    this.props.updateUser(this.props.currentUser.id, this.props.currentUser)
+    formData.append("image", this.state.photoFile);
+    this.props.updateUser(this.props.currentUser.id, this.state)
+    this.props.uploadPhoto(this.props.currentUser.id, formData)
   }
 
   handleFile(e) {
