@@ -34,7 +34,12 @@ const UserSchema = new Schema({
   rejected_users: {
     type: Array,
     required: false
-  }
+  },
+  photos: [{
+    type: String,
+    required: false
+  }]
+  //add key for img url
 });
 
 const User = mongoose.model("users", UserSchema);

@@ -5,9 +5,9 @@ const keys = require("../../config/keys");
 const BUCKET_NAME = "pooch-dev";
 
 const s3 = new AWS.S3({
-    accessKeyId: keys.AWSaccessKeyId,
-    secretAccessKey: keys.AWSsecretAccessKey,
-    region: 'us-west-1'
+  accessKeyId: keys.AWSaccessKeyId,
+  secretAccessKey: keys.secretAccessKey,
+  region: "us-west-1",
 });
 
 const fileFilter = (req, file, cb) => {
