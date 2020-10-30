@@ -100,6 +100,18 @@ router.post('/register', (req, res) => {
     })
 })
 
+router.get('/:userId', (req, res) => {
+  User.findById(
+    { _id: req.params.userId},
+    function(err, result) {
+      if (err) {
+        res.send(err);
+      } else {
+        res.send(result);
+      }
+    });
+})
+
 router.post('/login', (req, res) => {
   const { errors, isValid } = validateLoginInput(req.body);
 

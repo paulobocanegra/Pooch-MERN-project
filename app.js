@@ -5,6 +5,7 @@ const app = express();
 const db = require("./config/keys").mongoURI;
 const bodyParser = require("body-parser");
 const users = require("./routes/api/users");
+const matches = require("./routes/api/matches");
 const path = require('path');
 
 /** */
@@ -38,6 +39,7 @@ app.use(bodyParser.json());
 
 app.use("/api/users", users);
 app.use("/api/dogs", dogs);
+app.use("/api/matches", matches);
 // app.use('api/users/current', users);
 
 const port = process.env.PORT || 5000;

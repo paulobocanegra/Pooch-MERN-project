@@ -5,9 +5,9 @@ const MatchSchema = new Schema({
     matchedUsers: [{ 
         type: mongoose.Schema.ObjectId, 
         ref: 'User' }],
-    messages: [{type: String}]
+    messages: [{type: Object}]
 });
 
-const Match = mongoose.model("dogs", MatchSchema);
+const Match = mongoose.model("matches", MatchSchema);
 
 module.exports = Match;

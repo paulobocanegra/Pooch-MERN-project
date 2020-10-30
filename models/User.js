@@ -30,6 +30,11 @@ const UserSchema = new Schema({
    },
   dog: { type: mongoose.Schema.ObjectId, ref: 'Dog' },
   matches: [{ type: mongoose.Schema.ObjectId, ref: 'User' }],
+  
+  rejected_users: {
+    type: Array,
+    required: false
+  }
 });
 
 const User = mongoose.model("users", UserSchema);
