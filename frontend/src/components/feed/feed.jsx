@@ -7,6 +7,10 @@ class Feed extends React.Component{
         super(props);
     }
 
+    componentDidMount(){
+      debugger
+    }
+
     render(){
         return (
           <div className="main-discover-center">
