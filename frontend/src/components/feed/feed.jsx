@@ -8,7 +8,7 @@ class Feed extends React.Component{
     }
 
     componentDidMount(){
-      debugger
+
     }
 
     render(){
