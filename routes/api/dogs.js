@@ -5,6 +5,7 @@ const passport = require("passport");
 
 const Dog = require("../../models/Dog");
 const validateDogInput = require("../../validation/dogs");
+const validateDogUpdateInput = require("../../validation/update_dog")
 
 // GET ALL DOGS
 router.get("/", 
@@ -50,5 +51,29 @@ router.post(
     newDog.save().then((dog) => res.json(dog));
   }
 );
+
+
+router.patch('/:dogId',
+  // passport.authenticate("jwt", { session: false }),
+  (req, res) => {
+    const { errors, isValid } = validateDogUpdateInput(req.body);
+    if (!isValid) {
+      return res.status(400).json(errors);
+    }
+    Dog.updateOne(
+      { _id: req.params.dogId },
+      {
+        $set:
+        {
+          name: req.body.name,
+          age: req.body.age,
+          breed: req.body.breed,
+          sex: req.body.sex,
+          size: req.body.size,
+        }
+      })
+
+  });
+
 
 module.exports = router;
