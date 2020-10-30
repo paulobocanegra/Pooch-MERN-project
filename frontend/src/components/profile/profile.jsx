@@ -1,6 +1,7 @@
 import React from "react";
 import * as FetchItems from '../../util/fetch_current_user_items';
 import "./profile.css";
+import { Link }from "react-router-dom"
 
 class Profile extends React.Component {
   constructor(props) {
@@ -23,7 +24,7 @@ class Profile extends React.Component {
     e.preventDefault();
     const formData = new FormData();
     formData.append("image", this.state.photoFile);
-    this.props.updateUser(this.props.currentUser.id, this.state.user)
+    this.props.updateUser(this.props.currentUser.id, this.state.user);
     this.props.uploadPhoto(this.props.currentUser.id, formData);
   }
 
@@ -84,7 +85,7 @@ class Profile extends React.Component {
           </div>
           <div className="Profile-card-right">
             <div className="Profile-buttons">
-              {/* <button className="Skip-button">Skip</button> */}
+              <Link to="/feed" className="Skip-button">Skip</Link>
               <button className="Start-button">Get Started!</button>
             </div>
           </div>
