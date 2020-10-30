@@ -29,7 +29,7 @@ class Profile extends React.Component {
       this.props.uploadPhoto(this.props.currentUser.id, formData);
     }  
     this.props.updateUser(this.props.currentUser.id, this.state)
-      .then(this.props.history.push("/feed")
+      .then(this.props.history.push("/feed"))
   }
 
   handleFile(e) {
