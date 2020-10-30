@@ -11,6 +11,7 @@ const mapStateToProps = (state) => {
 
   return {
     currentUser: state.session.user,
+    // currentUser: state.entities.users[state.session.user],
     dogs: FetchItems.fetchDogs( state.session.user.id, Object.values(state.entities.dogs) )
   };
 };

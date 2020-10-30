@@ -8,7 +8,7 @@ class Profile extends React.Component {
     this.state = {
       photoFile: null,
       photoUrl: null,
-      bio: ""
+      bio: this.props.currentUser.bio
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
