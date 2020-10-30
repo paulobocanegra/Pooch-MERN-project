@@ -23,7 +23,7 @@ class Profile extends React.Component {
     e.preventDefault();
     const formData = new FormData();
     formData.append("image", this.state.photoFile);
-    this.props.updateUser(this.props.currentUser.id, this.state);
+    this.props.updateUser(this.props.currentUser.id, this.state.user)
     this.props.uploadPhoto(this.props.currentUser.id, formData);
   }
 
@@ -59,7 +59,7 @@ class Profile extends React.Component {
             </button>
           </div>
         </div>
-        <form className="Profile-card">
+        <form onSubmit={this.handleSubmit} className="Profile-card">
           <div className="Profile-card-left">
             
             {previewImage}
