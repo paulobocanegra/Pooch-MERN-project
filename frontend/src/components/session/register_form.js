@@ -1,6 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
-import {Link} from "react-router-dom";
+
 import "./register.css";
 
 class RegisterForm extends React.Component {
@@ -102,9 +102,9 @@ class RegisterForm extends React.Component {
                     onChange={this.update("password2")}
                     placeholder="Confirm Password"
                   />
-                <a onClick={this.handleSubmit}>
+                
                   <input className="Registration-button" type="submit" value="Continue" />
-                  </a>
+                  
                   {this.renderErrors()}
                 </div>
               </div>
