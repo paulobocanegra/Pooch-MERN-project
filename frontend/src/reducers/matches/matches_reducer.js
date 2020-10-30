@@ -2,7 +2,7 @@ import {
    RECEIVE_MATCH
 } from '../../actions/match_actions';
 
-export default (state, action) => {
+const matchesReducer = (state = {}, action) => {
    Object.freeze(state);
    let newState = Object.assign({}, state);
 
@@ -14,3 +14,5 @@ export default (state, action) => {
          return state;
    }
 }
+
+export default matchesReducer;
