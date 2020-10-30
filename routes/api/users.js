@@ -17,6 +17,7 @@ router.get( "/current", passport.authenticate("jwt", { session: false }),
       id: req.user.id,
       name: req.user.name,
       email: req.user.email,
+      bio: req.user.bio,
     });
   }
 );
@@ -84,7 +85,8 @@ router.post('/register', (req, res) => {
         const newUser = new User({
           name: req.body.name,
           email: req.body.email,
-          password: req.body.password
+          password: req.body.password,
+          bio: req.body.bio
         })
 
         bcrypt.genSalt(10, (err, salt) => {
@@ -123,6 +125,7 @@ router.post('/login', (req, res) => {
 
   const email = req.body.email;
   const password = req.body.password;
+  const bio = req.body.bio;
 
   User.findOne({ email })
     .then(user => {
@@ -137,7 +140,8 @@ router.post('/login', (req, res) => {
               id: user.id,
               email: user.email,
               name: user.name,
-              dog: user.dog
+              dog: user.dog,
+              bio: req.body.bio
             }
             jwt.sign(
               payload,

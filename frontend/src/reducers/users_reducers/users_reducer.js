@@ -10,9 +10,9 @@ const usersReducer = (state = {}, action) => {
   switch (action.type) {
     // debugger
     case RECEIVE_USERS:
-      return action.users
+      return action.users.data
     case RECEIVE_USER:
-      newState[action.user.id] = action.user
+      newState[action.user.data.id] = action.user.data
     case RECEIVE_CURRENT_USER:
       // debugger
       newState[action.currentUser.id] = action.currentUser;

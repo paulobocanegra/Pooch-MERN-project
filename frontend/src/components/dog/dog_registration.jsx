@@ -20,7 +20,7 @@ export default class DogRegistration extends React.Component{
     return (e) => {
       let value = e.currentTarget.value;
       if(fieldType === 'age') {
-        value = parseInt(value);
+        value = isNaN(value) ? "" : parseInt(value);
       }
       this.setState({ [fieldType]: value });
     };
