@@ -7,7 +7,8 @@ class Profile extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      bio: this.props.currentUser.bio
+       user: {bio: this.props.currentUser.bio},
+       uploaded: false
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -22,14 +23,17 @@ class Profile extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // debugger
-    const formData = new FormData();
-    formData.append("image", this.state.photoFile);
-    this.props.updateUser(this.props.currentUser.id, this.state.user);
-    this.props.uploadPhoto(this.props.currentUser.id, formData);
+    if ( this.state.uploaded ){
+      const formData = new FormData();
+      formData.append("image", this.state.photoFile);
+      this.props.uploadPhoto(this.props.currentUser.id, formData);
+    }  
+    this.props.updateUser(this.props.currentUser.id, this.state)
+      .then(this.props.history.push("/feed")
   }
 
   handleFile(e) {
+    this.setState({ uploaded: true })
     const file = e.currentTarget.files[0];
     const filereader = new FileReader();
     filereader.onloadend = () => {
