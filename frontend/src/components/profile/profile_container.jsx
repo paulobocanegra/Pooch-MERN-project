@@ -4,7 +4,7 @@ import Profile from "./profile";
 import { logout } from "../../actions/session_actions";
 import * as FetchItems from '../../util/fetch_current_user_items';
 import {fetchUsers } from '../../actions/user_actions';
-import { updateUser } from "../../util/user_util";
+import { updateUser, uploadPhoto } from "../../util/user_util";
 
 
 const mapStateToProps = (state) => {
@@ -21,7 +21,8 @@ const mapDispatchToProps = (dispatch) => {
     logout: () => dispatch(logout()),
     fetchDogs: () => dispatch(fetchDogs()),
     fetchUsers: () => dispatch(fetchUsers()),
-    updateUser: (userId, user) => dispatch(updateUser(userId, user))
+    updateUser: (userId, user) => dispatch(updateUser(userId, user)),
+    uploadPhoto: (userId, file) => dispatch(uploadPhoto(userId, file))
   };
 };
 
