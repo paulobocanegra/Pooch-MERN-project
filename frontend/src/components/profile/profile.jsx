@@ -47,7 +47,7 @@ class Profile extends React.Component {
             <img className="Logo" src="./Pooch-logo.png" alt="" />
             <h1 className="Logo-text">pooch</h1>
           </div>
-          <div className="Nav-right">
+          <div className="Nav-right-profile">
             <h1 className="Nav-bar-text-greeting">Hello, {currentUser.name}</h1>
             <button className="Nav-button" onClick={logout}>
               LogOut

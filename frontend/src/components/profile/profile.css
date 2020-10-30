@@ -149,3 +149,11 @@ input[type='file'] {
 .profile-form{
      position: relative;
 }
+
+.Nav-right-profile{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 14vw;
+}
