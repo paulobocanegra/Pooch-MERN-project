@@ -41,7 +41,7 @@ class Profile extends React.Component {
       <img className="Profile-image" src="./empty_profile.png" alt="" />
     );
     return (
-      <div>
+      <form onSubmit={this.handleSubmit}>
         <div className="Nav-bar">
           <div className="Nav-left">
             <img className="Logo" src="./Pooch-logo.png" alt="" />
@@ -58,13 +58,13 @@ class Profile extends React.Component {
           <div className="Profile-card-left">
             
             {previewImage}
-            <form  className="profile-form" onSubmit={this.handleSubmit}>
+            <div  className="profile-form" >
             <input
               className="add-avatar-button"
               type="file"
               onChange={this.handleFile.bind(this)}
             /> 
-            </form>
+            </div>
             <textarea
               className="Bio-input"
               name=""
@@ -81,7 +81,7 @@ class Profile extends React.Component {
             </div>
           </div>
         </div>
-      </div>
+      </form>
     );
   }
 }
