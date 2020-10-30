@@ -46,3 +46,4 @@ export const logout = () => (dispatch) => {
   SessionAPIUtil.setAuthToken(false);
   dispatch(logoutUser());
 };
+
