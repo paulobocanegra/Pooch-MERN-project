@@ -50,42 +50,44 @@ class LoginForm extends React.Component {
   }
 
   render() {
-    const{closeModal} = this.props
+    const { closeModal } = this.props
     return (
       <div className="Modal-screen">
-        <button onClick={() => closeModal()} className="Modal-button">X</button>
-        <form onSubmit={this.handleSubmit}>
+        <div className="Modal-box">
+          <div className="Modal-button" onClick={() => closeModal()}>X</div>
           <div className="Login-form" >
-            <div className="Logo-wrapper">
-              <img className="Login-pooch-logo" src="./Pooch-logo.png" alt=""/>
-              <h1 className="Login-pooch-text-logo">pooch</h1>
-            </div>
-            <div className="Login-input-wrapper">
-              <input className="Login-input"
-                type="text"
-                value={this.state.email}
-                onChange={this.update("email")}
-                placeholder="Email"
-                />
-            
-              <input
-                className="Login-input"
-                type="password"
-                value={this.state.password}
-                onChange={this.update("password")}
-                placeholder="Password"
-                />
-            
-              <input className="Login-form-login-button" type="submit" value="Submit" />
-              
-              <div className="Redirect">Not A Member Yet?
-                <p>Sign Up</p>
+            <form onSubmit={this.handleSubmit}>
+              <div className="Logo-wrapper">
+                <img className="Login-pooch-logo" src="./Pooch-logo.png" alt="" />
+                <h1 className="Login-pooch-text-logo">pooch</h1>
               </div>
-            </div>
+              <div className="Login-input-wrapper">
+                <input className="Login-input"
+                  type="text"
+                  value={this.state.email}
+                  onChange={this.update("email")}
+                  placeholder="Email"
+                />
+
+                <input
+                  className="Login-input"
+                  type="password"
+                  value={this.state.password}
+                  onChange={this.update("password")}
+                  placeholder="Password"
+                />
+
+                <input className="Login-form-login-button" type="submit" value="Submit" />
+
+                <div className="Redirect">Not A Member Yet?
+                <p>Sign Up</p>
+                </div>
+              </div>
+
+              {this.renderErrors()}
+            </form>
           </div>
-          
-                {this.renderErrors()}
-        </form>
+        </div>
       </div>
     );
   }

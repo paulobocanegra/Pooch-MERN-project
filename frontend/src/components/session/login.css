@@ -9,6 +9,12 @@
   overflow: auto; 
   background-color: rgb(0,0,0); 
   background-color: rgba(0,0,0,0.4); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Modal-box{
+    margin: auto;
 }
 
 .Login-form{
@@ -21,7 +27,8 @@
   width: 370px; 
   height: 500px;
   border-radius: 5px;
-  clear: both;
+  justify-content: center;
+  align-items: center;
 }
 
 .Login-pooch-text-logo{
@@ -38,9 +45,10 @@
 
 .Logo-wrapper{
     display: flex;
-    width: fit-content;
+    /* width: fit-content; */
     align-self: center;
     margin-top: 30px;
+    justify-content: center;
     
 }
 .Login-pooch-logo{
@@ -103,16 +111,33 @@
 }
 
 .Modal-button{
-    float: right;
+    /* float: right;
     margin-top: 30px;
     margin-right: 30px;
     color: #fefefe;
     font-size: 35px;
     font-weight: 600;
     background-color: rgba(255,255,255,0);
-    border: none;
+    border: none; */
+    color: #fefefe;
+    font-size: 26px;
+    font-weight: 600;
+    background-color: rgba(255,255,255,0);
+    height: 50px;
+    width: 50px;
+    align-items: center;
+    margin: 0% 0% -15% 101%;
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    font-weight: 100;
+    
+    
 }
 
 .Modal-button:hover{
     cursor: pointer;
+    border-radius: 31px;
+    background: rgba(235, 227, 227, 0.5);
+    color: black;
 }
