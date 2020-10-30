@@ -36,6 +36,7 @@
     width: 150px;
     align-self: center;
     margin-top: 15px;
+    position: relative;
 }
 .Profile-image:hover{
     cursor: pointer;
@@ -92,4 +93,59 @@
 .Profile-buttons{
     display: flex;
     justify-content: space-between;
+}
+
+.image-preview{
+    object-fit: cover;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  align-self: center;
+    margin-top: 15px;
+    clear: right;
+    
+}
+
+.add-avatar-button:focus {outline:0;}
+
+.add-avatar-button::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.add-avatar-button::before {
+  content: '+';
+  display: inline-block;
+  border: none;
+  border-radius: 22px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  background-color:hsla(254, 74%, 32%, 0.878);
+  color: white;
+  /* position: absolute;
+  left: 490px;
+  top: 250px; */
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(100%, -150%);
+  -ms-transform: translate(-60%, -90%);
+  border: none;
+  cursor: pointer;
+  
+  
+    
+}
+
+input[type='file'] {
+  color: transparent;
+}
+
+.profile-form{
+     position: relative;
 }

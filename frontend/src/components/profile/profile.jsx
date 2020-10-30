@@ -5,13 +5,41 @@ import "./profile.css";
 class Profile extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      photoFile: null,
+      photoUrl: null,
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
   componentDidMount() {
     this.props.fetchDogs();
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append("user[photo]", this.state.photoFile);
+    // updateUser(formData);
+  }
+
+  handleFile(e) {
+    const file = e.currentTarget.files[0];
+    const filereader = new FileReader();
+    filereader.onloadend = () => {
+      this.setState({ photoFile: file, photoUrl: filereader.result });
+    };
+    if (file) {
+      filereader.readAsDataURL(file);
+    }
+  }
+
   render() {
     const { currentUser, logout } = this.props;
+    const previewImage = this.state.photoUrl ? (
+      <img className="image-preview" src={this.state.photoUrl} />
+    ) : (
+      <img className="Profile-image" src="./empty_profile.png" alt="" />
+    );
     return (
       <div>
         <div className="Nav-bar">
@@ -28,7 +56,15 @@ class Profile extends React.Component {
         </div>
         <div className="Profile-card">
           <div className="Profile-card-left">
-            <img className="Profile-image" src="./empty_profile.png" alt="" />
+            
+            {previewImage}
+            <form  className="profile-form" onSubmit={this.handleSubmit}>
+            <input
+              className="add-avatar-button"
+              type="file"
+              onChange={this.handleFile.bind(this)}
+            /> 
+            </form>
             <textarea
               className="Bio-input"
               name=""
