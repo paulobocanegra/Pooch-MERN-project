@@ -3,6 +3,8 @@ import { fetchDogs } from '../../actions/dog_actions';
 import Profile from "./profile";
 import { logout } from "../../actions/session_actions";
 import * as FetchItems from '../../util/fetch_current_user_items';
+import {fetchUsers } from '../../actions/user_actions';
+
 
 const mapStateToProps = (state) => {
 
@@ -15,7 +17,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     logout: () => dispatch(logout()),
-    fetchDogs: () => dispatch(fetchDogs())
+    fetchDogs: () => dispatch(fetchDogs()),
+    fetchUsers: () => dispatch(fetchUsers())
   };
 };
 

@@ -13,6 +13,7 @@ class Profile extends React.Component {
   }
   componentDidMount() {
     this.props.fetchDogs();
+    this.props.fetchUsers();
   }
 
   handleSubmit(e) {
