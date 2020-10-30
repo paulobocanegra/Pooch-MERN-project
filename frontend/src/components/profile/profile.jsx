@@ -22,6 +22,7 @@ class Profile extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    // debugger
     const formData = new FormData();
     formData.append("image", this.state.photoFile);
     this.props.updateUser(this.props.currentUser.id, this.state.user);

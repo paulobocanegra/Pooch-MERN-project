@@ -24,52 +24,20 @@ router.get(
 );
 
 router.patch("/:userId", (req, res) => {
-  let newState = {};
-  if (req.body.bio) {
-    newState[bio] = req.body.bio;
-  }
-  if (req.body.liked_users) {
-    newState[liked_users] = req.body.liked_users;
-  }
-  if (req.body.rejected_users) {
-    newState[rejected_users] = req.body.rejected_users;
-  }
-  User.findByIdAndUpdate({ _id: req.params.userId }, newState, function (
-    err,
-    result
-  ) {
+  User.findByIdAndUpdate({ _id: req.params.userId }, req.body, (err, result) => {
+    if (err) {
+      res.send(err);
+    } 
+  });
+  User.findById({ _id: req.params.userId }, (err, result) => {
     if (err) {
       res.send(err);
     } else {
       res.send(result);
     }
   });
-});
-
-// router.patch('/:userId',
-// // passport.authenticate("jwt", { session: false }),
-//   (req, res) => {
-//   const { errors, isValid } = validateUpdateInput(req.body);
-//   if (!isValid) {
-//     return res.status(400).json(errors);
-//   }
-//   // debugger
-//   // return req.params.userId
-//   User.updateOne(
-//     { _id: req.params.userId},
-//     { $set:
-//       { name: req.body.name,
-//         // email: req.body.email,
-//         // password: req.body.password,
-//         // location: req.body.location,
-//         // bio: req.body.bio,
-//         // liked_users: req.body.liked_users,
-//         // matches: req.body.matches,
-//       }
-//     })
-
-//   });
-
+})
+  
 router.post("/register", (req, res) => {
   const { errors, isValid } = validateRegisterInput(req.body);
   if (!isValid) {
@@ -86,7 +54,7 @@ router.post("/register", (req, res) => {
         name: req.body.name,
         email: req.body.email,
         password: req.body.password,
-        // bio: req.body.bio
+        bio: req.body.bio
       });
 
       bcrypt.genSalt(10, (err, salt) => {
@@ -124,7 +92,7 @@ router.post("/login", (req, res) => {
 
   const email = req.body.email;
   const password = req.body.password;
-  // const bio = req.body.bio;
+  const bio = req.body.bio;
 
   User.findOne({ email }).then((user) => {
     if (!user) {
