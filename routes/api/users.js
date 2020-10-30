@@ -157,4 +157,13 @@ router.post('/login', (req, res) => {
     })
 })
 
+router.get('/', (req, res) => {
+  User.find().then(function (err, result) {
+    if (err) {
+      res.send(err);
+    } else {
+      res.send(result);
+    }
+  });
+})
 module.exports = router;

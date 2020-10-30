@@ -1,4 +1,4 @@
-import * as ImageUtil from '../util/images_util';
+import * as ImageUtil from '../util/image_util';
 
 export const RECEIVE_IMAGES = "RECEIVE_IMAGES";
 export const RECEIVE_IMAGE = "RECEIVE_IMAGE";
