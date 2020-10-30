@@ -3,7 +3,6 @@
     padding: 0%;
 }
 
-
 .Nav-bar{
   display: flex;
   justify-content: space-between;
@@ -16,17 +15,16 @@
   margin:auto;
 
   
-  
 }
 .Nav-left{
     display: flex;
     
 }
 
-
 .Nav-right{
     display: flex;
     align-items: center;
+    flex-direction: row;
     
 }
 
@@ -46,9 +44,10 @@
     font-size: 18px;
     color: white;    
     font-family: sans-serif;
-    margin-bottom: 10px;
-    margin-left: 10px;
+    /* margin-bottom: 10px;
+    margin-left: 10px; */
     background-color: hsla(254, 74%, 32%, 0.878);
+    text-align: center;
 }
 
 .Nav-button:hover{
@@ -79,8 +78,11 @@
     font-weight: 400;
     width: 100px;
     height: 35px;
-    vertical-align: text-bottom;
-    
+    /* vertical-align: text-bottom; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .Nav-bar-text:hover{

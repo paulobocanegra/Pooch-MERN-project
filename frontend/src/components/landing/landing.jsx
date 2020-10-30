@@ -14,11 +14,15 @@ render(){
         return (
           <div className="Landing-page">
             <ModalContainer />
+            
             <div className="Nav-bar">
+              {/* <Link to="/"> */}
               <div className="Nav-left">
                 <img className="Logo" src="./Pooch-logo.png" alt="" />
                 <h1 className="Logo-text">pooch</h1>
               </div>
+              {/* </Link> */}
+
               <div className="Nav-right">
                 <h3 className="Nav-bar-text">About us</h3>
                 <h3 className="Nav-bar-text">Contact Us</h3>
