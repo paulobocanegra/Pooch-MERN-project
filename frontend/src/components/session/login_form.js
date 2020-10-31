@@ -1,6 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import { closeModal } from "../../actions/modal_actions";
+import {Link} from "react-router-dom";
 import "./login.css"
 
 class LoginForm extends React.Component {
@@ -80,7 +81,7 @@ class LoginForm extends React.Component {
                 <input className="Login-form-login-button" type="submit" value="Submit" />
 
                 <div className="Redirect">Not A Member Yet?
-                <p>Sign Up</p>
+                <Link to="/register">Sign Up</Link>
                 </div>
               </div>
 
