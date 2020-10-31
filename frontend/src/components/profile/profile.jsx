@@ -45,6 +45,7 @@ class Profile extends React.Component {
   }
 
   render() {
+    
     const { currentUser, logout } = this.props;
     const previewImage = this.state.photoUrl ? (
       <img className="image-preview" src={this.state.photoUrl} />
