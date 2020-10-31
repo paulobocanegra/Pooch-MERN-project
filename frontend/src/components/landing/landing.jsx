@@ -2,6 +2,7 @@ import React from 'react';
 import ModalContainer from '../modal/modal';
 import { Link } from "react-router-dom";
 import "./landing.css";
+import Footer from "../footer/footer"
 
 class LandingComponent extends React.Component {
    constructor(props){
@@ -24,8 +25,10 @@ render(){
               {/* </Link> */}
 
               <div className="Nav-right">
-                <h3 className="Nav-bar-text">About us</h3>
-                <h3 className="Nav-bar-text">Contact Us</h3>
+                <Link className="Nav-bar-link" to="/about">
+                  <h3 className="Nav-bar-text">About</h3>
+                </Link>
+                <h3 className="Nav-bar-text">Contact</h3>
                 <button
                   className="Nav-button"
                   onClick={() => openModal("LOGIN")}
@@ -101,6 +104,7 @@ render(){
                 {/* <p className="Socializing-blurb"><h2 className="socialization-header">Why Socialize?</h2>Socialization teaches us to be polite, to not solve problems with violence, and how to interact with and respect the boundaries of others. For dogs, socialization means understanding their place in the pack, and following the rules set by the Pack Leaders.</p> */}
               </div>
             </div>
+            <Footer />
           </div>
         );
 }

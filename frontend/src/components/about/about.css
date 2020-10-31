@@ -4,17 +4,15 @@
 }
 
 .Nav-bar{
-  display: flex;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  z-index: 3;
-  background-color: white;
-  height: 90px;
-  width:1423px ;
-  margin:auto;
-
-  
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background-color: white;
+    height: 90px;
+    width:1423px ;
+    margin:auto;
 }
 .Nav-left{
     display: flex;
@@ -25,6 +23,17 @@
     display: flex;
     align-items: center;
     flex-direction: row;
+    
+}
+
+.Nav-bar-link{
+    color: black;
+    text-decoration: none;
+}
+
+.Nav-bar-text:hover{
+    cursor: pointer;
+    color: hsl(237, 62%, 35%);
 }
 
 
@@ -70,6 +79,7 @@
     margin-top: 10px;
     height: fit-content;
     color: hsla(45, 100%, 50%, 0.92);
+   
 }
 
 .Nav-bar-text{
@@ -82,17 +92,10 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    text-decoration: none;
-}
-
-.Nav-bar-link{
-    color: black;
-    text-decoration: none;
 }
 
 .Nav-bar-text:hover{
     cursor: pointer;
-    color: hsl(237, 62%, 35%);
 }
 
 .Hero-banner{
@@ -315,6 +318,3 @@ align-items: center;
     left: 350px;
     bottom: -800px;
 }
-
-/* ------------------Pseudo Classes--------------------- */
-

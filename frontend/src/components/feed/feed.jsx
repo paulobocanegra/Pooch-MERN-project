@@ -3,20 +3,17 @@ import { fetchUser } from '../../util/user_util';
 import './feed.css';
 import { photoSelector } from "./photo";
 
-
-class Feed extends React.Component {
-  constructor(props) {
+class Feed extends React.Component{
+    constructor(props) {
     super(props);
-    // this.state = { currentUser: "" };
   }
 
   componentDidMount() {
     let currentUser = this.props.fetchUser(this.props.currentUserId).then(this.props.fetchUsers())
     this.setState({ currentUser: currentUser });
-    
   }
 
-  render() {
+    render() {
     let currentUserPhoto = this.props.currentUser
       ? this.props.currentUser.photos[0]
       : null;
@@ -55,20 +52,25 @@ class Feed extends React.Component {
           </div>
           <div className="rightSide-container">
             <div className="Discover-nav">
-              {/* <Link to="/"> */}
               <div className="discover-nav-left">
                 <img className="Logo" src="./Pooch-logo.png" alt="" />
-                <h1 className="Logo-text">pooch</h1>
+                <h1 className="Logo-text">pooch</h1
               </div>
-              {/* </Link> */}
-
               <div className="discover-nav-right">
                 <h3 className="Nav-bar-welcome">Hello, {currentUserName}</h3>
-
                 <div className="Nav-button2" onClick={this.props.logout}>
                   Logout
                 </div>
               </div>
+                <div className="picture-bio-container">
+                  <div className="picture-bio-inner-container"> 
+                    <div className="picture-container"></div>
+                    <div className="bio-container"></div>
+                  </div>
+                  <div className="yes-no-container">
+                    <div className="rej-button">X</div>
+                    <img className="paw-icon" src="./paw-solid2.png" alt="" />
+                  </div>
             </div>
 
             <div className="picture-bio-container">
