@@ -40,41 +40,57 @@ class About extends React.Component{
                         </div>
                     </div>
                     <h1 className="Choosing-pooch">About Us</h1>
-                    <div className="Learn-more-section">
-                        <div className="Learn-more-child">
+                    <div className="Learn-more-section-about">
+                        <div className="Learn-more-child-about">
                             <img
                                 className="Learn-more-image"
                                 src="./dog_and_comp.png"
                                 alt=""
                             />
-                            <h5 className="Learn-more-text">
+                            <h5 className="Learn-more-text-about">
                                 Get advice from other dog lovers about the best product for
                                 your pup!
-                </h5>
-                            <button className="Learn-more-button">Learn More</button>
+                                <br/>
+                                <button className="Learn-more-button">Learn More</button>
+                            </h5>
                         </div>
-                        <div className="Learn-more-child">
+                        <div className="Learn-more-child-about">
+                            <h5 className="Learn-more-text-about">
+                                Connect with other dog lovers and get you pup the
+                                socialization they need!
+                                <br />
+                                <button className="Learn-more-button">Learn More</button>
+                            </h5>
                             <img
                                 className="Learn-more-image"
                                 src="./phone_and_dog.png"
                                 alt=""
                             />
-                            <h5 className="Learn-more-text">
-                                Connect with other dog lovers and get you pup the
-                                socialization they need!
-                </h5>
-                            <button className="Learn-more-button">Learn More</button>
                         </div>
-                        <div className="Learn-more-child">
+                        <div className="Learn-more-child-about">
                             <img
                                 className="Learn-more-image"
                                 src="./friend_dog.png"
                                 alt=""
                             />
-                            <h5 className="Learn-more-text">
+                            <h5 className="Learn-more-text-about">
                                 Socialize your dog and meet new people along the way!
-                </h5>
-                            <button className="Learn-more-button">Learn More</button>
+                                <br />
+                                <button className="Learn-more-button">Learn More</button>
+                            </h5>
+                        </div>
+                        <div className="Learn-more-child-about">
+                            <h5 className="Learn-more-text-about">
+                                Connect with other dog lovers and get you pup the
+                                socialization they need!
+                                <br />
+                                <button className="Learn-more-button">Learn More</button>
+                            </h5>
+                            <img
+                                className="Learn-more-image"
+                                src="./phone_and_dog.png"
+                                alt=""
+                            />
                         </div>
                     </div>
                     <Footer />
