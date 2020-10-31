@@ -20,8 +20,10 @@ class Feed extends React.Component{
               <div className="Message-innerbox">
                 <div className="User-avatar-container">
               <img className="User-avatar" src="./empty_profile.png" alt="" />
-        <p className="name">{this.props.currentUser.name}</p>
-                    <div className="user-icon"><i class="fas fa-user"></i></div>
+                <p className="name">{this.props.currentUser.name}</p>
+                {/* <div className="user-icon1">
+                      <img className="user-icon" src="./user-solid2.png" alt="" />
+                </div> */}
                 </div>
               <input
                 className="Search-matches"
@@ -36,6 +38,7 @@ class Feed extends React.Component{
               </ul>
               </div>
             </div>
+
             <div className="rightSide-container">
               <div className="Discover-nav">
                   {/* <Link to="/"> */}
@@ -47,7 +50,7 @@ class Feed extends React.Component{
 
                   <div className="discover-nav-right">
                     
-        <h3 className="Nav-bar-welcome">Hello, {this.props.currentUser.name}</h3>
+                 <h3 className="Nav-bar-welcome">Hello, {this.props.currentUser.name}</h3>
 
                   <div className="Nav-button2" onClick={this.props.logout}>Logout</div>
                   </div>
@@ -58,13 +61,17 @@ class Feed extends React.Component{
                     <div className="picture-container"></div>
                     <div className="bio-container"></div>
                   </div>
-                </div>
+
+                  <div className="yes-no-container">
+                    <div className="rej-button">X</div>
+                    <img className="paw-icon" src="./paw-solid2.png" alt="" />
+                  </div>
             </div>
 
 
             </div>
-            
           </div>
+        </div>
         );
     }
 
