@@ -41,7 +41,7 @@ class Profile extends React.Component {
   render() {
     const { currentUser, logout } = this.props;
     const previewImage = this.state.photoUrl ? (
-      <img className="image-preview" src={this.state.photoUrl} />
+      <img className="image-preview" src={this.state.photoUrl} alt =""/>
     ) : (
       <img className="Profile-image" src="./empty_profile.png" alt="" />
     );
@@ -49,7 +49,7 @@ class Profile extends React.Component {
       <div>
         <div className="Nav-bar">
           <div className="Nav-left">
-            <img className="Logo" src="./Pooch-logo.png" alt="" />
+            <img className="Logo" src="./Pooch-logo.png" />
             <h1 className="Logo-text">pooch</h1>
           </div>
           <div className="Nav-right">
