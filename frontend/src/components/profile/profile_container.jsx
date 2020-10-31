@@ -4,7 +4,7 @@ import Profile from "./profile";
 import { logout } from "../../actions/session_actions";
 import * as FetchItems from '../../util/fetch_current_user_items';
 import {fetchUsers } from '../../actions/user_actions';
-import { updateUser, uploadPhoto } from "../../util/user_util";
+import { updateUser, uploadPhoto } from "../../actions/user_actions";
 
 
 const mapStateToProps = (state) => {

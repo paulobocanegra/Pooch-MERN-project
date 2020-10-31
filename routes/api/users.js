@@ -10,8 +10,9 @@ const validateRegisterInput = require("../../validation/register");
 const validateLoginInput = require("../../validation/login");
 const validateUpdateInput = require("../../validation/update");
 
-
-router.get( "/current", passport.authenticate("jwt", { session: false }),
+router.get(
+  "/current",
+  passport.authenticate("jwt", { session: false }),
   (req, res) => {
     res.json({
       id: req.user.id,
@@ -23,98 +24,64 @@ router.get( "/current", passport.authenticate("jwt", { session: false }),
 );
 
 router.patch("/:userId", (req, res) => {
-  User.findByIdAndUpdate(
-    { _id: req.params.userId},
-    { name: req.body.name, 
-      email: req.body.email, 
-      password: req.body.password, 
-      location: req.body.location, 
-      bio: req.body.bio, 
-      liked_users: req.body.liked_users, 
-      matches: req.body.matches, 
-      },
-    function(err, result) {
-      if (err) {
-        res.send(err);
-      } else {
-        res.send(result);
-      }
+  User.findByIdAndUpdate({ _id: req.params.userId }, req.body, (err, result) => {
+    if (err) {
+      res.send(err);
+    } 
+  });
+  User.findById({ _id: req.params.userId }, (err, result) => {
+    if (err) {
+      res.send(err);
+    } else {
+      res.send(result);
     }
-  );
-});
-
-
-// router.patch('/:userId', 
-// // passport.authenticate("jwt", { session: false }),
-//   (req, res) => {
-//   const { errors, isValid } = validateUpdateInput(req.body);
-//   if (!isValid) {
-//     return res.status(400).json(errors);
-//   }
-//   // debugger
-//   // return req.params.userId
-//   User.updateOne(
-//     { _id: req.params.userId},
-//     { $set: 
-//       { name: req.body.name, 
-//         // email: req.body.email, 
-//         // password: req.body.password, 
-//         // location: req.body.location, 
-//         // bio: req.body.bio, 
-//         // liked_users: req.body.liked_users, 
-//         // matches: req.body.matches, 
-//       }
-//     })
-
-//   });  
-
-
-
-
-router.post('/register', (req, res) => {
+  });
+})
+  
+router.post("/register", (req, res) => {
   const { errors, isValid } = validateRegisterInput(req.body);
   if (!isValid) {
     return res.status(400).json(errors);
   }
 
-  User.findOne({ email: req.body.email })
-    .then(user => {
-      if (user) {
-        return res.status(400).json({email: "A user has already registered with this address"})
-      } else {
-        const newUser = new User({
-          name: req.body.name,
-          email: req.body.email,
-          password: req.body.password,
-          bio: req.body.bio
-        })
+  User.findOne({ email: req.body.email }).then((user) => {
+    if (user) {
+      return res
+        .status(400)
+        .json({ email: "A user has already registered with this address" });
+    } else {
+      const newUser = new User({
+        name: req.body.name,
+        email: req.body.email,
+        password: req.body.password,
+        bio: req.body.bio
+      });
 
-        bcrypt.genSalt(10, (err, salt) => {
-          bcrypt.hash(newUser.password, salt, (err, hash) => {
-            if (err) throw err;
-            newUser.password = hash;
-            newUser.save()
-              .then((user) => res.json(user))
-              .catch(err => console.log(err))
-          })
-        })
-      }
-    })
-})
+      bcrypt.genSalt(10, (err, salt) => {
+        bcrypt.hash(newUser.password, salt, (err, hash) => {
+          if (err) throw err;
+          newUser.password = hash;
+          newUser
+            .save()
+            .then((user) => res.json(user))
+            .catch((err) => console.log(err));
+        });
+      });
+    }
+  });
+});
 
-router.get('/:userId', (req, res) => {
-  User.findById(
-    { _id: req.params.userId},
-    function(err, result) {
-      if (err) {
-        res.send(err);
-      } else {
-        res.send(result);
-      }
-    });
-})
+router.get("/:userId", (req, res) => {
+  User.findById({ _id: req.params.userId }, function (err, result) {
+    if (err) {
+      res.send(err);
+    } else {
+      res.send(result);
+    }
+  });
+});
 
-router.post('/login', (req, res) => {
+router.post("/login", (req, res) => {
   const { errors, isValid } = validateLoginInput(req.body);
 
   console.log(errors);
@@ -127,41 +94,39 @@ router.post('/login', (req, res) => {
   const password = req.body.password;
   const bio = req.body.bio;
 
-  User.findOne({ email })
-    .then(user => {
-      if (!user) {
-        return res.status(404).json({ email: "This user does not exist" });
-      }
+  User.findOne({ email }).then((user) => {
+    if (!user) {
+      return res.status(404).json({ email: "This user does not exist" });
+    }
 
-      bcrypt.compare(password, user.password)
-        .then(isMatch => {
-          if (isMatch) {
-            const payload = {
-              id: user.id,
-              email: user.email,
-              name: user.name,
-              dog: user.dog,
-              bio: req.body.bio
-            }
-            jwt.sign(
-              payload,
-              keys.secretOrKey,
-              { expiresIn: 3600 },
-              (err, token) => {
-                res.json({
-                  success: true,
-                  token: "Bearer " + token
-                });
-              }
-            )
-          } else {
-            return res.status(400).json({ password: "Incorrect password" });
+    bcrypt.compare(password, user.password).then((isMatch) => {
+      if (isMatch) {
+        const payload = {
+          id: user.id,
+          email: user.email,
+          name: user.name,
+          dog: user.dog,
+          bio: req.body.bio,
+        };
+        jwt.sign(
+          payload,
+          keys.secretOrKey,
+          { expiresIn: 3600 },
+          (err, token) => {
+            res.json({
+              success: true,
+              token: "Bearer " + token,
+            });
           }
-        })
-    })
-})
+        );
+      } else {
+        return res.status(400).json({ password: "Incorrect password" });
+      }
+    });
+  });
+});
 
-router.get('/', (req, res) => {
+router.get("/", (req, res) => {
   User.find().then(function (err, result) {
     if (err) {
       res.send(err);
@@ -169,7 +134,7 @@ router.get('/', (req, res) => {
       res.send(result);
     }
   });
-})
+});
 
 const upload = require("./image_upload_aws.js");
 

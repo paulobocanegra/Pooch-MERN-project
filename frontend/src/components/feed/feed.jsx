@@ -7,6 +7,10 @@ class Feed extends React.Component{
         super(props);
     }
 
+    componentDidMount(){
+
+    }
+
     render(){
         return (
           <div className="main-discover-center">
@@ -24,7 +28,7 @@ class Feed extends React.Component{
                 type="search"
                 placeholder="Search Play Mates"
               />
-              <ul>
+              <ul >
                 <div className="Matched-user">
                 <img className="User-avatar" src="./empty_profile.png" alt="" />
                 <p className="new">Name</p>

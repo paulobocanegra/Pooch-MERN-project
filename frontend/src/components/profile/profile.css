@@ -70,6 +70,8 @@
     border:none;
     font-size: 20px;
     color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
 }
 
 .Skip-button:hover{
