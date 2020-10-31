@@ -4,11 +4,11 @@ import {connect} from 'react-redux';
 import LandingComponent from './landing';
 import { openModal } from '../../actions/modal_actions';
 
-const mapStateToProps = state => {
-  return{
+// const mapStateToProps = state => {
+//   return{
 
-  };
-};
+//   };
+// };
 
 const mapDispatchtoProps = dispatch => {
     return {
@@ -16,4 +16,4 @@ const mapDispatchtoProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchtoProps)(LandingComponent);
+export default connect(null, mapDispatchtoProps)(LandingComponent);
