@@ -13,5 +13,5 @@ export const updateUser = (userId, data) => (
 );
 
 export const uploadPhoto = (userId, data) => (
-  axios.post(`api/users/${userId}/add-profile-picture`, data)
+   axios.post(`api/users/${userId}/add-profile-picture`, data)
 );
