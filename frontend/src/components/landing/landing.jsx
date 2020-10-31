@@ -25,8 +25,10 @@ render(){
               {/* </Link> */}
 
               <div className="Nav-right">
-                <h3 className="Nav-bar-text">About us</h3>
-                <h3 className="Nav-bar-text">Contact Us</h3>
+                <Link className="Nav-bar-link" to="/about">
+                  <h3 className="Nav-bar-text">About</h3>
+                </Link>
+                <h3 className="Nav-bar-text">Contact</h3>
                 <button
                   className="Nav-button"
                   onClick={() => openModal("LOGIN")}
