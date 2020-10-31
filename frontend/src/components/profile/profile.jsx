@@ -3,6 +3,8 @@ import * as FetchItems from '../../util/fetch_current_user_items';
 import "./profile.css";
 import { Link }from "react-router-dom"
 
+import MatchMakingComponent from '../match_making/match_making_container'
+
 class Profile extends React.Component {
   constructor(props) {
     super(props);
@@ -96,6 +98,9 @@ class Profile extends React.Component {
             </div>
           </div>
         </form>
+        <div>
+          <MatchMakingComponent />
+        </div>
       </div>
     );
   }

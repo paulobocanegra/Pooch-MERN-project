@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const passport = require("passport");
 
 const Match = require("../../models/Match");
+const User = require("../../models/User")
 
 router.post('/', (req, res) => {
    const users = [
@@ -13,8 +14,36 @@ router.post('/', (req, res) => {
       matchedUsers: users
    })
    newMatch.save()
-      .then((match) => res.json(match))
-      .catch((err) => console.log(err))
+   let matchId = newMatch._id;
+
+   User.findByIdAndUpdate(
+     { _id: req.body.currentUser },
+     {
+       $push: {
+         matches: matchId
+       },
+     },
+     function (err, result) {
+       if (err) {
+         res.send(err);
+       }
+     }
+   )
+   User.findByIdAndUpdate(
+     { _id: req.body.likedUser },
+     {
+       $push: {
+         matches: matchId
+       },
+     },
+     function (err, result) {
+       if (err) {
+         res.send(err);
+       } else {
+         res.send(newMatch);
+       }
+     }
+   )
 })
 
 router.get('/:matchId', (req, res) => {
