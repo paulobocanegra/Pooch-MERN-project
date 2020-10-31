@@ -19,6 +19,12 @@ export const fetchUsers = () => dispatch => (
       .catch( err => console.log(err) )
 )
 
+export const fetchUser = (userId) => dispatch => (
+   util.fetchUser(userId)
+      .then( user => dispatch(receiveUser(user)))
+      .catch( err => console.log(err) )
+)
+
 export const updateUser = (userId, user) => dispatch => (
    util.updateUser(userId, user)
       .then( user => dispatch(receiveUser(user)) )
