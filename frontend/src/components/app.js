@@ -3,7 +3,6 @@ import React from "react";
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 import { Switch, Route } from "react-router-dom";
 
-
 import "./app.css";
 
 
@@ -18,6 +17,7 @@ import ProfileContainer from "../components/profile/profile_container";
 import FeedContainer from "../components/feed/feed_container";
 
 
+
 const App = () => (
   <div>
     {/* <Header/> */}
@@ -29,6 +29,7 @@ const App = () => (
       <ProtectedRoute exact path="/feed" component={FeedContainer} />
       <AuthRoute path='/' component={LandingPageContainer} />
     </Switch>
+
   </div>
 );
 
