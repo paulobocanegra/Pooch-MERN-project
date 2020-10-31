@@ -2,6 +2,7 @@ import React from 'react';
 import ModalContainer from '../modal/modal';
 import { Link } from "react-router-dom";
 import "./landing.css";
+import Footer from "../footer/footer"
 
 class LandingComponent extends React.Component {
    constructor(props){
@@ -101,6 +102,7 @@ render(){
                 {/* <p className="Socializing-blurb"><h2 className="socialization-header">Why Socialize?</h2>Socialization teaches us to be polite, to not solve problems with violence, and how to interact with and respect the boundaries of others. For dogs, socialization means understanding their place in the pack, and following the rules set by the Pack Leaders.</p> */}
               </div>
             </div>
+            <Footer />
           </div>
         );
 }

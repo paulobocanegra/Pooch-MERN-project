@@ -1,0 +1,45 @@
+
+.footer-div{
+    background-color: rgba(221, 221, 221, 0.466);
+    color: rgba(255, 255, 255, 0.25);
+    height: 300px;
+    font-size: 16px;
+    margin-top: 75px;
+    border-top:  1.5px solid gray;
+}
+
+.footer-section {
+    display: flex;
+    justify-content: space-between;
+    width: 960px;
+    padding: 35px 50px 15px 50px;
+}
+
+.footer-link{
+    text-decoration: none;
+    color: hsla(45, 100%, 50%, 0.92);
+}
+
+.footer-title{
+    color: hsl(237, 62%, 35%) ;
+    font-weight: 800;
+}
+
+.contact-text{
+    color: rgb(51, 51, 51);
+}
+
+.footer-ul{
+    margin-left: 20vw;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+.footer-li{
+    padding: 5px 0px 5px 0px;
+    width: 250px;
+}
+
+.footer-li:first-child{
+    padding-top: 10px;
+}
