@@ -18,8 +18,10 @@ render(){
             
             <div className="Nav-bar">
               <div className="Nav-left">
-                <img className="Logo" src="./Pooch-logo.png" alt="" />
-                <h1 className="Logo-text">pooch</h1>
+                <Link className="Nav-bar-link" to="/">
+                  <img className="Logo" src="./Pooch-logo.png" alt="" />
+                  <h1 className="Logo-text">pooch</h1>
+                </Link>
               </div>
               <div className="Nav-right">
                 <Link className="Nav-bar-link" to="/about">

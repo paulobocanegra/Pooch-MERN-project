@@ -24,6 +24,7 @@ class About extends React.Component{
                         </div>
 
                         <div className="Nav-right">
+                            <div><Link className="Nav-bar-link" to="/"><div className="Nav-bar-text">Home</div></Link> </div> 
                             <div className="main-dropdown"> 
                                 <div className="dropdown-buttom">Contact</div>
                                 <div className="dropdown-content"><a className="footer-link"  target="_blank" href="https://www.gmail.com" />
