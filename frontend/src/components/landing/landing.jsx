@@ -17,18 +17,23 @@ render(){
             <ModalContainer />
             
             <div className="Nav-bar">
-              {/* <Link to="/"> */}
               <div className="Nav-left">
                 <img className="Logo" src="./Pooch-logo.png" alt="" />
                 <h1 className="Logo-text">pooch</h1>
               </div>
-              {/* </Link> */}
-
               <div className="Nav-right">
                 <Link className="Nav-bar-link" to="/about">
-                  <h3 className="Nav-bar-text">About</h3>
+                  <div className="Nav-bar-text">About</div>
                 </Link>
-                <h3 className="Nav-bar-text">Contact</h3>
+                <div className="main-dropdown">
+                  <div className="dropdown-buttom">Contact</div>
+                  <div className="dropdown-content"><a className="footer-link" target="_blank" href="https://www.gmail.com" />
+                    <li>juancattaneo92@gmail.com</li>
+                    <li>paulobocanegra@gmail.com</li>
+                    <li>diegodiegorene@gmail.com</li>
+                    <li>oah232@gmail.com</li>
+                  </div>
+                </div>
                 <button
                   className="Nav-button"
                   onClick={() => openModal("LOGIN")}
@@ -60,7 +65,7 @@ render(){
                 </div>
               </div>
             </div>
-            <h1 className="Choosing-pooch">Why Choose pooch?</h1>
+            <h1 className="Title-Pooch">Why choose Pooch?</h1>
             <div className="Learn-more-section">
               <div className="Learn-more-child">
                 <img

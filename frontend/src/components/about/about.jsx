@@ -16,30 +16,30 @@ class About extends React.Component{
                     <ModalContainer />
 
                     <div className="Nav-bar">
-                        {/* <Link to="/"> */}
                         <div className="Nav-left">
-                            <img className="Logo" src="./Pooch-logo.png" alt="" />
-                            <h1 className="Logo-text">pooch</h1>
+                            <Link className="Nav-bar-link" to="/">
+                                <img className="Logo" src="./Pooch-logo.png" alt="" />
+                                <h1 className="Logo-text">pooch</h1>
+                             </Link>
                         </div>
-                        {/* </Link> */}
 
                         <div className="Nav-right">
-                            <Link className="Nav-bar-link" to="/">
-                                <h3 className="Nav-bar-text">Home</h3>
-                            </Link>
-                            <h3 className="Nav-bar-text">Contact</h3>
-                            <button
-                                className="Nav-button"
-                                onClick={() => openModal("LOGIN")}
-                            >
-                                Login
-                            </button>
+                            <div className="main-dropdown"> 
+                                <div className="dropdown-buttom">Contact</div>
+                                <div className="dropdown-content"><a className="footer-link"  target="_blank" href="https://www.gmail.com" />
+                                        <li>juancattaneo92@gmail.com</li>
+                                        <li>paulobocanegra@gmail.com</li>
+                                        <li>diegodiegorene@gmail.com</li>
+                                        <li>oah232@gmail.com</li>
+                                </div>
+                            </div>
+                            <button className="Nav-button" onClick={() => openModal("LOGIN")}>Login</button>
                             <Link to="/register">
                                 <button className="Nav-button">Sign Up</button>
                             </Link>
                         </div>
                     </div>
-                    <h1 className="Choosing-pooch">About Us</h1>
+                    <h1 className="Title-Pooch">About Us</h1>
                     <div className="Learn-more-section-about">
                         <div className="Learn-more-child-about">
                             <img
