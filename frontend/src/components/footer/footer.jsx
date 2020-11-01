@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './footer.css'
 
 class Footer extends React.Component {
@@ -11,7 +12,7 @@ class Footer extends React.Component {
                                 <div className="footer-title">About</div>
                                 <div>
                                     <div className="footer-li"><a target="_blank" className="footer-link" href="https://github.com/juancattaneo92/Pooch-MERN-project">Pooch</a></div>
-                                    <div className="footer-li"><a target="_blank" className="footer-link" href="https://www.linkedin.com/in/paulo-bocanegra-a89b641b9/">Developers</a></div>
+                                    <div className="footer-li"><Link className="footer-link" to="/about">Developers</Link></div>
                                 </div>
                         </div>
                     </div>
