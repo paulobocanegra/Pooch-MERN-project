@@ -3,7 +3,7 @@ import * as FetchItems from '../../util/fetch_current_user_items';
 import "./profile.css";
 import { Link }from "react-router-dom"
 
-import MatchMakingComponent from '../match_making/match_making_container'
+// import MatchMakingComponent from '../match_making/match_making_container'
 
 class Profile extends React.Component {
   constructor(props) {
@@ -99,7 +99,7 @@ class Profile extends React.Component {
           </div>
         </form>
         <div>
-          <MatchMakingComponent />
+          {/* <MatchMakingComponent /> */}
         </div>
       </div>
     );

@@ -3,6 +3,7 @@ import { fetchUser } from '../../util/user_util';
 import './feed.css';
 import { photoSelector } from "./photo";
 import {Link} from 'react-router-dom';
+import MatchContainer from "../match_making/match_making_container";
 
 class Feed extends React.Component{
     constructor(props) {
@@ -43,12 +44,12 @@ class Feed extends React.Component{
               />
               <ul>
                 <div className="Matched-user">
-                  <img
+                  {/* <img
                     className="User-avatar"
                     src="./empty_profile.png"
                     alt=""
                   />
-                  <p className="new">Name</p>
+                  <p className="new">Name</p> */}
                 </div>
               </ul>
             </div>
@@ -65,24 +66,15 @@ class Feed extends React.Component{
                   Logout
                 </div>
               </div>
-              <div className="picture-bio-container">
-                <div className="picture-bio-inner-container">
-                  <div className="picture-container"></div>
-                  <div className="bio-container"></div>
-                </div>
-                <div className="yes-no-container">
-                  <div className="rej-button">X</div>
-                  <img className="paw-icon" src="./paw-solid2.png" alt="" />
-                </div>
+                
               </div>
-
-              <div className="picture-bio-container">
-                <div className="picture-bio-inner-container">
-                  <div className="picture-container"></div>
-                  <div className="bio-container"></div>
-                </div>
-              </div>
-            </div>
+              
+                
+                  {/* <div className="picture-container"></div>
+                  <div className="bio-container"></div> */}
+              <MatchContainer />
+                
+            
           </div>
         </div>
       </div>
