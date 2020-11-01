@@ -12,9 +12,24 @@
     font-size: 15px;
  
 }
+
+.image-holder{
+     width: 25vw;
+     height: 461px;
+     overflow: hidden;
+     object-fit: cover;
+  
+}
 .users-image{
-       width: 25vw ;
+       width: 100%;
        border-radius: 5px;
+       height: 485px;
+       /* image-rendering: auto; */
+  /* image-rendering: crisp-edges; */
+  /* image-rendering: pixelated; */
+  object-fit: cover;
+   
+    
 }
 
 .name-bio-card{

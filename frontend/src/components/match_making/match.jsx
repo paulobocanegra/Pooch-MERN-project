@@ -109,7 +109,9 @@ export default class MatchMaking extends React.Component {
             {newMatch ? (
               <>
                 <div className="picture-bio-inner-container">
+                   <div className="image-holder">
                   <img src={newMatch.photos[0]} alt="" className="users-image" />
+                  </div>
                   <div className="name-bio-card">
                     <h1 className="new-match-name">{newMatch.name}</h1>
 

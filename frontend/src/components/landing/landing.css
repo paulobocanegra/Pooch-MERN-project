@@ -48,6 +48,7 @@
     margin-left: 10px;
     background-color: hsla(254, 74%, 32%, 0.878);
     text-align: center;
+    margin-top: 8px;
 }
 
 .Nav-button:hover{
@@ -156,6 +157,7 @@
     margin-bottom: 1px;
     margin-top: 30px;
     padding: 10px;
+    
 }
 .Hook-text{
     text-align: center;
@@ -164,6 +166,7 @@
     font-size: 13px;
     color: #454444;
     width: 385px;
+    line-height: 130%;
 }
 .Button-wrapper1{
     display: flex;
@@ -265,55 +268,76 @@
     width: 103px;
     height: 35px;
     border-radius: 5px;
-    background:hsla(45, 100%, 50%, 0.865);
+    background-color:hsla(45, 100%, 50%, 0.865);
     margin-top: 15px;
 }
 
 .Learn-more-button:hover{
     cursor: pointer;
-    background-color: hsla(45, 100%, 45%, 0.865)
+    
+    background-color: hsla(45, 100%, 51%, 0.865);
 }
 .Learn-more-button:active{
     cursor: pointer;
-    background-color: hsl(48, 69%, 43%)
+    background-color: hsla(45, 100%, 51%, 0.865);
 
     
 }
 
 .Socializing-section{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1px;
+    background-color:;
+    
 
-    width: 1000px;
-    height: 350px;
+    
 }
 .Dog-image{
     height: 600px;
-    position: relative;
-    width: 400px;
+    
+    width: 700px;
+    
 
 }
 .Why-socialize-blurb{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    height: 300px;
+    justify-content: end;
+    align-items: flex-end;
+    
+    color:hsla(254, 74%, 32%, 0.899);
+
+    
+    
+    
+    
 }
 .socialization-header{
     font-family: sans-serif;
     text-align: center;
+    font-weight: 700;
+    font-size: 140%;
+    margin-bottom: 15px;
+    
+    
+    
     
 }
 
 .Socializing-blurb{
     font-family: sans-serif;
-    width: 600px;
-    height: 275px;
+    width: 500px;
     text-align: center;
-    background-color: blueviolet;
-    position: absolute;
-    left: 350px;
-    bottom: -800px;
+    padding: 10px;
+    line-height: 150%;
+    font-size: 120%;
+    
+   
+    
+    
+    
 }
 
 /* ------------------Pseudo Classes--------------------- */

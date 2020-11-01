@@ -1,6 +1,6 @@
 import {connect} from "react-redux";
 import {closeModal} from "../../actions/modal_actions";
-import Learnmore from "../Learnmore_component.jsx";
+import Learnmore from "./learnmore_component";
 
 const mapStateToProps = state =>{
     return{
@@ -16,4 +16,4 @@ const mapDispatchToProps = dispatch =>{
 };
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Learnmore)
+export default connect(mapStateToProps, mapDispatchToProps)(Learnmore);

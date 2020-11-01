@@ -15,7 +15,7 @@ render(){
         return (
           <div className="Landing-page">
             <ModalContainer />
-            
+
             <div className="Nav-bar">
               <div className="Nav-left">
                 <Link className="Nav-bar-link" to="/">
@@ -29,11 +29,48 @@ render(){
                 </Link>
                 <div className="main-dropdown2">
                   <div className="dropdown-button2">Contact</div>
-                  <div className="dropdown-content2"><a className="footer-link" target="_blank" href="https://www.gmail.com" />
-                    <li><a className="email-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=juancattaneo92@gmail.com" target="_blank">juancattaneo92@gmail.com</a></li>
-                    <li><a className="email-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=paulobocanegra@gmail.com" target="_blank">paulobocanegra@gmail.com</a></li>
-                    <li><a className="email-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=diegodiegorene@gmail.com" target="_blank">diegodiegorene@gmail.com</a></li>
-                    <li><a className="email-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=oah232@gmail.com" target="_blank">oah232@gmail.com</a></li>
+                  <div className="dropdown-content2">
+                    <a
+                      className="footer-link"
+                      target="_blank"
+                      href="https://www.gmail.com"
+                    />
+                    <li>
+                      <a
+                        className="email-link"
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=juancattaneo92@gmail.com"
+                        target="_blank"
+                      >
+                        juancattaneo92@gmail.com
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="email-link"
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=paulobocanegra@gmail.com"
+                        target="_blank"
+                      >
+                        paulobocanegra@gmail.com
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="email-link"
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=diegodiegorene@gmail.com"
+                        target="_blank"
+                      >
+                        diegodiegorene@gmail.com
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="email-link"
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=oah232@gmail.com"
+                        target="_blank"
+                      >
+                        oah232@gmail.com
+                      </a>
+                    </li>
                   </div>
                 </div>
                 <button
@@ -79,7 +116,12 @@ render(){
                   Get advice from other dog lovers about the best product for
                   your pup!
                 </h5>
-                <button className="Learn-more-button">Learn More</button>
+                <button
+                  className="Learn-more-button"
+                  onClick={() => openModal("learnmore")}
+                >
+                  Learn More
+                </button>
               </div>
               <div className="Learn-more-child">
                 <img
@@ -91,7 +133,12 @@ render(){
                   Connect with other dog lovers and get you pup the
                   socialization they need!
                 </h5>
-                <button className="Learn-more-button">Learn More</button>
+                <button
+                  className="Learn-more-button"
+                  onClick={() => openModal("learnmore")}
+                >
+                  Learn More
+                </button>
               </div>
               <div className="Learn-more-child">
                 <img
@@ -102,13 +149,25 @@ render(){
                 <h5 className="Learn-more-text">
                   Socialize your dog and meet new people along the way!
                 </h5>
-                <button className="Learn-more-button">Learn More</button>
+                <button
+                  className="Learn-more-button"
+                  onClick={() => openModal("learnmore")}
+                >
+                  Learn More
+                </button>
               </div>
             </div>
             <div className="Socializing-section">
-              {/* <img className= "Dog-image" src="landing-dog.png" alt=""/> */}
+              <img className="Dog-image" src="3-Dogs_transparent.png" alt="" />
               <div className="Why-socialize-blurb">
-                {/* <p className="Socializing-blurb"><h2 className="socialization-header">Why Socialize?</h2>Socialization teaches us to be polite, to not solve problems with violence, and how to interact with and respect the boundaries of others. For dogs, socialization means understanding their place in the pack, and following the rules set by the Pack Leaders.</p> */}
+                <p className="Socializing-blurb">
+                  <h2 className="socialization-header">Why Socialize?</h2>
+                  "Socialization teaches us to be polite, to not solve problems
+                  with violence, and how to interact with and respect the
+                  boundaries of others. For dogs, socialization means
+                  understanding their place in the pack, and following the rules
+                  set by the Pack Leaders."
+                </p>
               </div>
             </div>
             <Footer />
