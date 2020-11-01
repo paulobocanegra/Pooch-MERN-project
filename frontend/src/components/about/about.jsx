@@ -49,7 +49,7 @@ class About extends React.Component{
                                 alt=""
                             />
                             <h5 className="Learn-more-text-about">
-                                <h3 className="developer-name">Diego Chavez (Frontend Lead)</h3>
+                                <p className="developer-name">Diego Chavez (Frontend Lead)</p>
                                 <br />
                                 Originally from San Diego. Passionate about improving UX and UI design. Always keeping up with development trends. The Detailist.
                                 <br />
@@ -60,7 +60,7 @@ class About extends React.Component{
                         </div>
                         <div className="Learn-more-child-about">
                             <h5 className="Learn-more-text-about">
-                                <h3 className="developer-name">Paulo Bocanegra (Backend Lead)</h3>
+                                <p className="developer-name">Paulo Bocanegra (Backend Lead)</p>
                                 <br/>
                                 Born in Lima, Peru. Passionate about developing technologies focused on the improvement of people's quality of life. Critical thinker.
                                 <br />
@@ -92,7 +92,7 @@ class About extends React.Component{
                         </div>
                         <div className="Learn-more-child-about">
                             <h5 className="Learn-more-text-about">
-                                <h3 className="developer-name">Omar Hernandez (Technical Lead)</h3>
+                                <p className="developer-name">Omar Hernandez (Technical Lead)</p>
                                 <br />
                                 San Francisco native. Passionate about FILL IN WITH YOUR PASSION. Problem Solver.
                                 <br />
