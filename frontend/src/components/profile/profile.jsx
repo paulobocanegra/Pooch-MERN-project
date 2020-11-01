@@ -64,7 +64,7 @@ class Profile extends React.Component {
           <div className="Nav-right">
             <h1 className="Nav-bar-text-greeting">Hello, {currentUser.name}</h1>
             <button className="Nav-button" onClick={logout}>
-              LogOut
+              Logout
             </button>
           </div>
         </div>

@@ -85,9 +85,15 @@
 }
 
 .User-avatar{
-    width: 60px;
-    height: 60px;
-    margin-right: 15px;
+    object-fit: cover;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  margin-right: 5px;
+  align-self: center;
+    margin-top: 15px;
+    border: 1px solid rgba(203, 200, 200, 0.564);
+
 }
 .User-avatar:hover{
     cursor: pointer;
