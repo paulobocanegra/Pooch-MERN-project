@@ -51,7 +51,7 @@ class About extends React.Component{
                             <h5 className="Learn-more-text-about">
                                 <p className="developer-name">Diego Chavez (Frontend Lead)</p>
                                 <br />
-                                Originally from San Diego. Passionate about improving UX and UI design. Always keeping up with development trends. The Detailist.
+                                Originally from San Diego. Passionate about improving UX and UI design. Always keeping up with development trends. Attention to Detail.
                                 <br />
                                 <a href="https://www.linkedin.com/in/diego-chavez-784310114/" target="_blank">
                                     <button className="Learn-more-button">Learn More</button>
@@ -92,9 +92,9 @@ class About extends React.Component{
                         </div>
                         <div className="Learn-more-child-about">
                             <h5 className="Learn-more-text-about">
-                                <p className="developer-name">Omar Hernandez (Technical Lead)</p>
+                                <p className="developer-name">Omar Hernandez (Flex - Technical Lead)</p>
                                 <br />
-                                San Francisco native. Passionate about FILL IN WITH YOUR PASSION. Problem Solver.
+                                San Francisco native. Passionate about problem solving with excellent debugging skills. Divergent Thinker.
                                 <br />
                                 <button className="Learn-more-button">Learn More</button>
                             </h5>
