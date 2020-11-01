@@ -16,21 +16,12 @@
 }
 
 .footer-section {
-    margin-top: 30px;
     display: flex;
-    justify-content: space-between;
-    margin-left: 180px;
+    text-align-last: center;
 }
 
-.footer-left{
+.footer-content{
     display: flex;
-    align-items: end;
-    flex-direction: column;
-}
-
-.footer-right{
-    display: flex;
-    align-items: end;
     flex-direction: column;
 }
 
@@ -40,15 +31,12 @@
 }
 
 .footer-title{
-    color: #909090;
+    color: #5a61c5;
     font-weight: 200;
     font-size: 25px;
     margin-bottom: 5px;
-    border-bottom: 1px solid #909090;
-}
+    text-decoration-line: underline;
 
-.contact-text{
-    color: rgb(51, 51, 51);
 }
 
 .footer-ul{
@@ -60,24 +48,28 @@
 .footer-li{
     padding: 5px 0px 5px 0px;
     width: 250px;
-    color: #b9b9b9;
+    color: hsl(237deg 62% 35% / 56%);
     font-weight: 100;
 }
 
-
 .logo-footer{
-display: flex;
-align-items: center;
-justify-content: center;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 22px;
 }
 
 .Logo-text-footer{
-font-family: sans-serif;
-    font-size: 45px;
+    font-family: sans-serif;
+    font-size: 25px;
     margin: 0px;
     height: -moz-fit-content;
     height: fit-content;
     color: hsla(45, 100%, 50%, 0.92);
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+}
+
+.Logo-footer-pic{
+    height: 60px;
+    width: 60px;
 }

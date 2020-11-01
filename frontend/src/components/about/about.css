@@ -29,6 +29,9 @@
 .Nav-bar-link{
     color: black;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
 }
 
 .Nav-bar-text:hover{
@@ -128,20 +131,6 @@
     position: absolute;
     top: 150px;
     backdrop-filter: blur(3px);
-}
-
-.Choosing-pooch{
-    text-align: center;
-    font-family: sans-serif;
-    font-weight: 650;
-    font-size: 27px;
-    color:hsla(254, 70%, 32%, 0.99);
-    margin-bottom: 1px;
-    margin-top: 50px;
-    width: 1423px;
-    margin: auto;
-    margin-top: 35px;
-
 }
 
 .Text-wrapper1{
@@ -317,4 +306,53 @@ align-items: center;
     position: absolute;
     left: 350px;
     bottom: -800px;
+}
+
+/* 
+<div className="dropdown-about"> 
+<button className="dropdown-buttom">Contact</button>
+<div className="dropdown-content"> */
+
+.dropdown-buttom{
+    font-size: 19px;
+    cursor: pointer;
+    display: flex;
+    margin: 15px;
+}
+
+.main-dropdown{
+    position: relative;
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content > li {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content > li:hover{
+    color: hsla(254, 74%, 32%, 0.878);
+    cursor: pointer;
+}
+
+.main-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.main-dropdown:hover .dropdown-buttom{
+    color: hsla(254, 74%, 32%, 0.878);
 }
