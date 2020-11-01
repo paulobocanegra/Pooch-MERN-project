@@ -56,14 +56,15 @@ class About extends React.Component{
                         </div>
                         <div className="Learn-more-child-about">
                             <h5 className="Learn-more-text-about">
-                                Connect with other dog lovers and get you pup the
-                                socialization they need!
+                                <h3 className="developer-name">Paulo Bocanegra (Backend Lead)</h3>
+                                <br/>
+                                Originally from Peru. Passionate about developing technologies to improve people's quality of life.
                                 <br />
                                 <button className="Learn-more-button">Learn More</button>
                             </h5>
                             <img
                                 className="Learn-more-image"
-                                src="./phone_and_dog.png"
+                                src="./paulo_bocanegra.png"
                                 alt=""
                             />
                         </div>
