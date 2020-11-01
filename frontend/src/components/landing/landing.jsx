@@ -18,16 +18,18 @@ render(){
             
             <div className="Nav-bar">
               <div className="Nav-left">
-                <img className="Logo" src="./Pooch-logo.png" alt="" />
-                <h1 className="Logo-text">pooch</h1>
+                <Link className="Nav-bar-link" to="/">
+                  <img className="Logo" src="./Pooch-logo.png" alt="" />
+                  <h1 className="Logo-text">pooch</h1>
+                </Link>
               </div>
               <div className="Nav-right">
                 <Link className="Nav-bar-link" to="/about">
                   <div className="Nav-bar-text">About</div>
                 </Link>
-                <div className="main-dropdown">
-                  <div className="dropdown-buttom">Contact</div>
-                  <div className="dropdown-content"><a className="footer-link" target="_blank" href="https://www.gmail.com" />
+                <div className="main-dropdown2">
+                  <div className="dropdown-buttom2">Contact</div>
+                  <div className="dropdown-content2"><a className="footer-link" target="_blank" href="https://www.gmail.com" />
                     <li>juancattaneo92@gmail.com</li>
                     <li>paulobocanegra@gmail.com</li>
                     <li>diegodiegorene@gmail.com</li>

@@ -76,12 +76,10 @@
 .Logo-text{
     font-family: sans-serif;
     font-size: 45px;
-    
-    /* color: hsl(48, 69%, 54%); */
     margin: 0px;
-    margin-top: 10px;
     height: fit-content;
     color: hsla(45, 100%, 50%, 0.92);
+    margin-bottom: 8px;
    
 }
 
