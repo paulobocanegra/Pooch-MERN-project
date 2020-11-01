@@ -27,13 +27,13 @@ render(){
                 <Link className="Nav-bar-link" to="/about">
                   <div className="Nav-bar-text">About</div>
                 </Link>
-                <div className="main-dropdown2">
-                  <div className="dropdown-buttom2">Contact</div>
-                  <div className="dropdown-content2"><a className="footer-link" target="_blank" href="https://www.gmail.com" />
-                    <li>juancattaneo92@gmail.com</li>
-                    <li>paulobocanegra@gmail.com</li>
-                    <li>diegodiegorene@gmail.com</li>
-                    <li>oah232@gmail.com</li>
+                <div className="main-dropdown">
+                  <div className="dropdown-buttom">Contact</div>
+                  <div className="dropdown-content"><a className="footer-link" target="_blank" href="https://www.gmail.com" />
+                    <li><a className="email-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=juancattaneo92@gmail.com" target="_blank">juancattaneo92@gmail.com</a></li>
+                    <li><a className="email-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=paulobocanegra@gmail.com" target="_blank">paulobocanegra@gmail.com</a></li>
+                    <li><a className="email-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=diegodiegorene@gmail.com" target="_blank">diegodiegorene@gmail.com</a></li>
+                    <li><a className="email-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=oah232@gmail.com" target="_blank">oah232@gmail.com</a></li>
                   </div>
                 </div>
                 <button

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import { withRouter } from "react-router-dom";
 
 import "./register.css";
@@ -59,8 +60,8 @@ class RegisterForm extends React.Component {
         return (
           <div className="login-form-container">
               <div className="registration-logo-wrapper">
-                <img className="Registration-logo" src="./Pooch-logo.png" alt=""/>
-                <h1 className="Pooch-logo-text1">pooch</h1>
+                  <img className="Registration-logo" src="./Pooch-logo.png" alt=""/>
+                  <h1 className="Pooch-logo-text1">pooch</h1>
               </div>
             <form className="Registration-form" onSubmit={this.handleSubmit}>
               <h1 className="Registration-header">Lets Get Started!</h1>
