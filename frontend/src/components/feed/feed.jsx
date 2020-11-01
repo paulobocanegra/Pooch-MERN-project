@@ -58,7 +58,7 @@ class Feed extends React.Component{
             <div className="Discover-nav">
               <div className="discover-nav-left">
                 <img className="Logo" src="./Pooch-logo.png" alt="" />
-                <h1 className="Logo-text">pooch</h1>
+                <h1 className="Logo-text2">pooch</h1>
               </div>
               <div className="discover-nav-right">
                 <h3 className="Nav-bar-welcome">Hello, {currentUserName}</h3>
