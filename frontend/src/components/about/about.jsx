@@ -58,7 +58,7 @@ class About extends React.Component{
                             <h5 className="Learn-more-text-about">
                                 <h3 className="developer-name">Paulo Bocanegra (Backend Lead)</h3>
                                 <br/>
-                                Originally from Peru. Passionate about developing technologies to improve people's quality of life.
+                                Born in Lima, Peru. Passionate about developing technologies focused on the improvement of people's quality of life.
                                 <br />
                                 <button className="Learn-more-button">Learn More</button>
                             </h5>
