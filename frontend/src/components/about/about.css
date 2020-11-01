@@ -271,6 +271,11 @@ align-items: center;
     
 }
 
+.email-link{
+    text-decoration: none;
+    color: #676565;
+}
+
 .Socializing-section{
     display: flex;
     justify-content: space-between;
