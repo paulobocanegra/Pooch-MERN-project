@@ -80,7 +80,7 @@ class About extends React.Component{
                                 alt=""
                             />
                             <h5 className="Learn-more-text-about">
-                                <h3 className="developer-name">Juan Carlos Cattaneo (Flex)</h3>
+                                <h3 className="developer-name">Juan Carlos Cattaneo (Flex - frontend/backend)</h3>
                                 <br />
                                 Born in Lima, Peru. Passionate about learning new technologies. Jumps from backend to frontend to support every team member. Team player.
                                 <br />
