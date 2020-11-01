@@ -50,7 +50,7 @@ class About extends React.Component{
                             <h5 className="Learn-more-text-about">
                                 <h3 className="developer-name">Diego Chavez (Frontend Lead)</h3>
                                 <br />
-                                Originally from San Diego. Passionate about improving UX and UI design. Always keeping up with development trends.
+                                Originally from San Diego. Passionate about improving UX and UI design. Always keeping up with development trends. The Detailist.
                                 <br />
                                 <a href="https://www.linkedin.com/in/diego-chavez-784310114/" target="_blank">
                                     <button className="Learn-more-button">Learn More</button>
@@ -61,7 +61,7 @@ class About extends React.Component{
                             <h5 className="Learn-more-text-about">
                                 <h3 className="developer-name">Paulo Bocanegra (Backend Lead)</h3>
                                 <br/>
-                                Born in Lima, Peru. Passionate about developing technologies focused on the improvement of people's quality of life.
+                                Born in Lima, Peru. Passionate about developing technologies focused on the improvement of people's quality of life. Critical thinker.
                                 <br />
                                 <a href="https://www.linkedin.com/in/paulo-bocanegra-a89b641b9/" target="_blank">
                                     <button className="Learn-more-button">Learn More</button>
@@ -82,7 +82,7 @@ class About extends React.Component{
                             <h5 className="Learn-more-text-about">
                                 <h3 className="developer-name">Juan Carlos Cattaneo (Flex)</h3>
                                 <br />
-                                Born in Lima, Peru. Passionate about .
+                                Born in Lima, Peru. Passionate about learning new technologies. Jumps from backend to frontend to support every team member. Team player.
                                 <br />
                                 <a href="https://www.linkedin.com/in/juan-carlos-cattaneo-450a3b97/" target="_blank">
                                     <button className="Learn-more-button">Learn More</button>
