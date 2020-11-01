@@ -1,4 +1,5 @@
 import React from 'react';
+import "./match.css"
 
 const LIKE = 'liked_users';
 const REJECT = 'rejected_users';
@@ -90,6 +91,7 @@ export default class MatchMaking extends React.Component {
    }
 
    render() {
+      
       let currentUser = this.props.currentUser
       
       if( !currentUser ){
@@ -97,22 +99,40 @@ export default class MatchMaking extends React.Component {
       }
       let newMatch = this.findMatch()
 
+   
 
 
-      return(
-         <div>
-            {
-               newMatch ? <div> 
-                  `${newMatch.name} ${currentUser.name}` 
-                  <br/>
-                  <button onClick={this.reject}>Hell no</button>
-                  <br/>
-                  <button onClick={this.like}>Sure why not</button>
-               </div>
-               : 'No current matches'
-            }
 
-         </div>
-      )
+      return (
+        <>
+          <div>
+            {newMatch ? (
+              <>
+                <div className="picture-bio-inner-container">
+                  <img src={newMatch.photos[0]} alt="" className="users-image" />
+                  <div className="name-bio-card">
+                    <h1 className="new-match-name">{newMatch.name}</h1>
+
+                    <h3 className="user-bio">{newMatch.bio}</h3>
+                  </div>
+                </div>
+                <div className="yes-no-container">
+                  <div className="rej-button" onClick={this.reject}>
+                    X
+                  </div>
+                  <img
+                    className="paw-icon"
+                    src="./paw-solid2.png"
+                    alt=""
+                    onClick={this.like}
+                  />
+                </div>
+              </>
+            ) : (
+              "No current matches"
+            )}
+          </div>
+        </>
+      );
    }
 }

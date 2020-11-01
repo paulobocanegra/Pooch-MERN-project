@@ -246,6 +246,7 @@ align-items: center;
     color: hsl(0, 1%, 40%);
     font-weight: 100;
     margin: 80px;
+    line-height: 19px;
 }
 
 .Learn-more-button{
@@ -308,11 +309,6 @@ align-items: center;
     bottom: -800px;
 }
 
-/* 
-<div className="dropdown-about"> 
-<button className="dropdown-buttom">Contact</button>
-<div className="dropdown-content"> */
-
 .dropdown-buttom{
     font-size: 19px;
     cursor: pointer;
@@ -355,4 +351,8 @@ align-items: center;
 
 .main-dropdown:hover .dropdown-buttom{
     color: hsla(254, 74%, 32%, 0.878);
+}
+
+.developer-name{
+    font-weight: 700;
 }

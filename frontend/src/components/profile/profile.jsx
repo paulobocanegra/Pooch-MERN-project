@@ -3,7 +3,7 @@ import * as FetchItems from '../../util/fetch_current_user_items';
 import "./profile.css";
 import { Link }from "react-router-dom"
 
-import MatchMakingComponent from '../match_making/match_making_container'
+// import MatchMakingComponent from '../match_making/match_making_container'
 
 class Profile extends React.Component {
   constructor(props) {
@@ -64,7 +64,7 @@ class Profile extends React.Component {
           <div className="Nav-right">
             <h1 className="Nav-bar-text-greeting">Hello, {currentUser.name}</h1>
             <button className="Nav-button" onClick={logout}>
-              LogOut
+              Logout
             </button>
           </div>
         </div>
@@ -99,7 +99,7 @@ class Profile extends React.Component {
           </div>
         </form>
         <div>
-          <MatchMakingComponent />
+          {/* <MatchMakingComponent /> */}
         </div>
       </div>
     );

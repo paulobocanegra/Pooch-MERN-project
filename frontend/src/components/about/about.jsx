@@ -44,45 +44,56 @@ class About extends React.Component{
                         <div className="Learn-more-child-about">
                             <img
                                 className="Learn-more-image"
-                                src="./dog_and_comp.png"
+                                src="./diego_rene.png"
                                 alt=""
                             />
                             <h5 className="Learn-more-text-about">
-                                Get advice from other dog lovers about the best product for
-                                your pup!
+                                <h3 className="developer-name">Diego Chavez (Frontend Lead)</h3>
+                                <br />
+                                Originally from San Diego. Passionate about improving UX and UI design. Always keeping up with development trends. The Detailist.
+                                <br />
+                                <a href="https://www.linkedin.com/in/diego-chavez-784310114/" target="_blank">
+                                    <button className="Learn-more-button">Learn More</button>
+                                </a>
+                            </h5>
+                        </div>
+                        <div className="Learn-more-child-about">
+                            <h5 className="Learn-more-text-about">
+                                <h3 className="developer-name">Paulo Bocanegra (Backend Lead)</h3>
                                 <br/>
-                                <button className="Learn-more-button">Learn More</button>
-                            </h5>
-                        </div>
-                        <div className="Learn-more-child-about">
-                            <h5 className="Learn-more-text-about">
-                                Connect with other dog lovers and get you pup the
-                                socialization they need!
+                                Born in Lima, Peru. Passionate about developing technologies focused on the improvement of people's quality of life. Critical thinker.
                                 <br />
-                                <button className="Learn-more-button">Learn More</button>
+                                <a href="https://www.linkedin.com/in/paulo-bocanegra-a89b641b9/" target="_blank">
+                                    <button className="Learn-more-button">Learn More</button>
+                                </a>
                             </h5>
                             <img
                                 className="Learn-more-image"
-                                src="./phone_and_dog.png"
+                                src="./paulo_bocanegra.png"
                                 alt=""
                             />
                         </div>
                         <div className="Learn-more-child-about">
                             <img
                                 className="Learn-more-image"
-                                src="./friend_dog.png"
+                                src="./juan_cattaneo.png"
                                 alt=""
                             />
                             <h5 className="Learn-more-text-about">
-                                Socialize your dog and meet new people along the way!
+                                <h3 className="developer-name">Juan Carlos Cattaneo (Flex)</h3>
                                 <br />
-                                <button className="Learn-more-button">Learn More</button>
+                                Born in Lima, Peru. Passionate about learning new technologies. Jumps from backend to frontend to support every team member. Team player.
+                                <br />
+                                <a href="https://www.linkedin.com/in/juan-carlos-cattaneo-450a3b97/" target="_blank">
+                                    <button className="Learn-more-button">Learn More</button>
+                                </a>
                             </h5>
                         </div>
                         <div className="Learn-more-child-about">
                             <h5 className="Learn-more-text-about">
-                                Connect with other dog lovers and get you pup the
-                                socialization they need!
+                                <h3 className="developer-name">Omar Hernandez (Technical Lead)</h3>
+                                <br />
+                                San Francisco native. Passionate about FILL IN WITH YOUR PASSION. Problem Solver.
                                 <br />
                                 <button className="Learn-more-button">Learn More</button>
                             </h5>
