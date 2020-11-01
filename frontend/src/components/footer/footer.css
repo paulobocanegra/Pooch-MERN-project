@@ -1,28 +1,50 @@
-
 .footer-div{
-    background-color: rgba(221, 221, 221, 0.466);
-    color: rgba(255, 255, 255, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background-color: white;
     height: 300px;
-    font-size: 16px;
-    margin-top: 75px;
-    border-top:  1.5px solid gray;
+    width: 1423px;
+    margin: auto;
+    font-size: 20px;
+    font-family: sans-serif; 
+    border-top: 1px solid #e4e4e4;
+    flex-direction: column;
 }
 
 .footer-section {
+    margin-top: 30px;
     display: flex;
     justify-content: space-between;
-    width: 960px;
-    padding: 35px 50px 15px 50px;
+    margin-left: 180px;
+}
+
+.footer-left{
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+}
+
+.footer-right{
+    display: flex;
+    align-items: end;
+    flex-direction: column;
 }
 
 .footer-link{
     text-decoration: none;
-    color: hsla(45, 100%, 50%, 0.92);
+    color: hsl(237deg 62% 35% / 56%);
 }
 
 .footer-title{
-    color: hsl(237, 62%, 35%) ;
-    font-weight: 800;
+    color: #909090;
+    font-weight: 200;
+    font-size: 25px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #909090;
 }
 
 .contact-text{
@@ -38,8 +60,24 @@
 .footer-li{
     padding: 5px 0px 5px 0px;
     width: 250px;
+    color: #b9b9b9;
+    font-weight: 100;
 }
 
-.footer-li:first-child{
-    padding-top: 10px;
+
+.logo-footer{
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+.Logo-text-footer{
+font-family: sans-serif;
+    font-size: 45px;
+    margin: 0px;
+    height: -moz-fit-content;
+    height: fit-content;
+    color: hsla(45, 100%, 50%, 0.92);
+    margin-bottom: 15px;
 }
