@@ -1,6 +1,9 @@
 {
   "name": "pooch-mern",
   "version": "1.0.0",
+  "engines": {
+    "node": "10.13.0"
+  },
   "description": "Social App focused on improving dog's quality of life by bringing them closer to each other.",
   "main": "index.js",
   "scripts": {
