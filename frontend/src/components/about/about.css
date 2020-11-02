@@ -276,17 +276,16 @@ align-items: center;
     color: #676565;
 }
 
-.Socializing-section{
+/* .Socializing-section{
     display: flex;
-    justify-content: space-between;
-
-    width: 1000px;
-    height: 350px;
+    flex-direction: row;
+    background-color: aqua;
+   
 }
 .Dog-image{
-    height: 600px;
+   
     position: relative;
-    width: 400px;
+    
 
 }
 .Why-socialize-blurb{
@@ -294,6 +293,7 @@ align-items: center;
     flex-direction: column;
     align-items: center;
     height: 300px;
+    background-color: bisque;
 }
 .socialization-header{
     font-family: sans-serif;
@@ -306,11 +306,8 @@ align-items: center;
     width: 600px;
     height: 275px;
     text-align: center;
-    background-color: blueviolet;
-    position: absolute;
-    left: 350px;
-    bottom: -800px;
-}
+    
+} */
 
 .dropdown-buttom{
     font-size: 19px;
