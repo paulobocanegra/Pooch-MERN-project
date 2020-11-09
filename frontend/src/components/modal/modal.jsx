@@ -3,7 +3,7 @@ import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import Login from '../session/login_form_container';
 import SignupFormContainer from '../session/register_form_container';
-import LearnmoreContainer from '../Learnmore/Learnmore.js';
+import LearnmoreContainer from '../Learnmore/learnmore.js';
 
 function Modal({ modal, closeModal }) {
     if (!modal) {
