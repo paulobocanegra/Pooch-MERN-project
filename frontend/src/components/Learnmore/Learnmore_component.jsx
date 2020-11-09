@@ -1,6 +1,6 @@
 import React from 'react';
 import "./learnmore.css"
-class Learnmore extends React.Component{
+class LearnMore extends React.Component{
     
 
     render(){
@@ -28,4 +28,4 @@ class Learnmore extends React.Component{
 
 }
 
-export default Learnmore;
+export default LearnMore;
