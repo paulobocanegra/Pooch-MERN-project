@@ -160,8 +160,8 @@ render(){
             <div className="Socializing-section">
               <img className="Dog-image" src="3-Dogs_transparent.png" alt="" />
               <div className="Why-socialize-blurb">
+               <h2 className="socialization-header">Why Socialize?</h2>
                 <p className="Socializing-blurb">
-                  <h2 className="socialization-header">Why Socialize?</h2>
                   "Socialization teaches us to be polite, to not solve problems
                   with violence, and how to interact with and respect the
                   boundaries of others. For dogs, socialization means

@@ -11,16 +11,16 @@ function Modal({ modal, closeModal }) {
     }
     let component;
     switch (modal) {
-        case 'LOGIN':
+         case 'LOGIN':
             component = <Login />;
             break;
-        case 'signup':
+         case 'signup':
             component = <SignupFormContainer />;
             break;
-            case 'learnmore':
-                component = <LearnmoreContainer/>
-                break;
-        default:
+         case 'learnmore':
+               component = <LearnmoreContainer/>
+               break;
+         default:
             return null;
     }
     return (
