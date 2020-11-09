@@ -1,5 +1,5 @@
 import React from 'react';
-import "./learnmore.css"
+import "./learnmore_css.css"
 class LearnMore extends React.Component{
     
 
