@@ -3,7 +3,7 @@ import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import Login from '../session/login_form_container';
 import SignupFormContainer from '../session/register_form_container';
-import LearnmoreContainer from '../Learnmore/learnmore.js';
+import LearnMoreContainer from '../learnmore/learnmore_container';
 
 function Modal({ modal, closeModal }) {
     if (!modal) {
@@ -18,7 +18,7 @@ function Modal({ modal, closeModal }) {
             component = <SignupFormContainer />;
             break;
          case 'learnmore':
-               component = <LearnmoreContainer/>
+               component = <LearnMoreContainer/>
                break;
          default:
             return null;
