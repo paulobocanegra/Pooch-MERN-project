@@ -304,15 +304,8 @@
 .Why-socialize-blurb{
     display: flex;
     flex-direction: column;
-    justify-content: end;
-    align-items: flex-end;
-    
+    justify-content: center;
     color:hsla(254, 74%, 32%, 0.899);
-
-    
-    
-    
-    
 }
 .socialization-header{
     font-family: sans-serif;
@@ -320,10 +313,6 @@
     font-weight: 700;
     font-size: 140%;
     margin-bottom: 15px;
-    
-    
-    
-    
 }
 
 .Socializing-blurb{
@@ -347,6 +336,10 @@
     cursor: pointer;
     display: flex;
     margin: 15px;
+}
+
+.dropdown-button2:hover{
+    color:hsla(254, 74%, 32%, 0.878) ;
 }
 
 .main-dropdown2{

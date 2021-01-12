@@ -47,12 +47,13 @@ class Profile extends React.Component {
   }
 
   render() {
+    if (!this.props.currentUserObject) return null
     
     const { currentUser, logout } = this.props;
     const previewImage = this.state.photoUrl ? (
-      <img className="image-preview" src={this.state.photoUrl} />
+      <img className="image-preview" src={this.state.photoUrl} alt=""/>
     ) : (
-      <img className="Profile-image" src="./empty_profile.png" alt="" />
+        <img className="Profile-image" src={this.props.currentUserObject.photos[0]} alt="" />
     );
     return (
       <div>
@@ -92,6 +93,8 @@ class Profile extends React.Component {
             ></textarea>
           </div>
           <div className="Profile-card-right">
+            <div className="user-name-profile">{this.props.currentUser.name}</div>
+            <div className="user-bio-profile">{this.props.currentUserObject.bio}</div>
             <div className="Profile-buttons">
               <Link to="/feed" className="Skip-button">Skip</Link>
               <button className="Start-button">Get Started!</button>

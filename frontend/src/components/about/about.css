@@ -276,6 +276,11 @@ align-items: center;
     color: #676565;
 }
 
+.email-link:hover{
+    
+    color: hsla(254, 74%, 32%, 0.878);
+}
+
 /* .Socializing-section{
     display: flex;
     flex-direction: row;

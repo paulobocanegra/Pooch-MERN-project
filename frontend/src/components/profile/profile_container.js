@@ -8,9 +8,20 @@ import { updateUser, uploadPhoto } from "../../actions/user_actions";
 
 
 const mapStateToProps = (state) => {
+  let currentUserObject;
+  const currentUserId = state.session.user.id;
+  let allUsers = Object.values(state.entities.users);
+  allUsers.forEach((user) => {
+    if (user._id === currentUserId) {
+      currentUserObject = user;
+    }
+  });
 
   return {
     currentUser: state.session.user,
+    user: state.entities.users[state.session.user.id],
+    currentUserObject,
+    allUsers,
     // currentUser: state.entities.users[state.session.user],
     dogs: FetchItems.fetchDogs( state.session.user.id, Object.values(state.entities.dogs) )
   };

@@ -37,6 +37,8 @@
     align-self: center;
     margin-top: 15px;
     position: relative;
+    border-radius: 50%;
+    background-image: url('https://www.quartzmasters.com/wp-content/uploads/2017/03/article-user-blank.jpg');
 }
 .Profile-image:hover{
     cursor: pointer;
@@ -60,7 +62,23 @@
     margin-left: 35px;
     margin-right: 50px;
     width: 380px;
-    justify-content: flex-end;
+    justify-content: space-between;
+}
+
+.user-name-profile{
+    font-size: 30px;
+    font-family: arial;
+    text-align: center;
+    margin: 30px;
+    font-weight: 700;
+    color: hsla(254, 74%, 32%, 0.878)
+}
+
+.user-bio-profile{
+    font-size: 25px;
+    font-family: arial;
+    text-align: center;
+    
 }
 
 .Skip-button{
@@ -105,6 +123,7 @@
   align-self: center;
     margin-top: 15px;
     clear: right;
+    
     
 }
 
